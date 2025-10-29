@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpFace — Open Infrastructure for Scientific Research (Bootstrap/jQuery)</title>
+    <meta name="description"
+        content="Open-source initiative for transparent, scalable, and collaborative scientific experimentation.">
+
+    <!-- Bootstrap CSS - REPLACE WITH LOCAL PATH FOR OFFLINE USE -->
+    <link href="src/global/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles to Emulate Original Theme and ensure rounded corners/shadows -->
+    <link href="src/index/style.css" rel="stylesheet">
+    <!-- Font Awesome for Icons (using CDN for simplicity, replace with local assets if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar (Sticky Top) -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#mission">Mission</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#governance">Governance</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#contribute">Contribute</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#tools">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#resources">Resources</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary rounded-md d-flex align-items-center ms-lg-3">
+                    <i class="fab fa-github me-2"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section-padding text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="badge bg-secondary rounded-pill mb-4 py-2 px-3 text-uppercase fw-semibold">
+                        <i class="fas fa-sparkles me-1"></i> Open Infrastructure for Reseach
+                    </span>
+                    <h1 class="mb-4 hero-title">Open Infrastructure for Scientific Research</h1>
+                    <p class="lead text-muted mb-5">Accelerate scientific experimentation through open-source tools,
+                        transparent governance, and collaborative innovation. Make research reproducible, accessible,
+                        and community-driven.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Principles Section -->
+    <section id="mission" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Core Principles</h2>
+                <p class="lead text-muted">Built on transparency, openness, and collaboration</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4 shadow-sm feature-card">
+                        <h3 class="h4 fw-semibold mb-3">Transparency</h3>
+                        <p class="text-muted">All decisions and discussions are public. Open communication builds trust
+                            and accelerates progress.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4 shadow-sm feature-card">
+                        
+                        <h3 class="h4 fw-semibold mb-3">Openness</h3>
+                        <p class="text-muted">Anyone can contribute code, documentation, or ideas. Collaboration drives
+                            innovation forward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Section -->
+    <section id="governance" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Governance</h2>
+                <p class="lead text-muted">The Internals oversee strategy, development, and community engagement</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr class="bg-light">
+                                            <th scope="col" class="py-3 px-4">Role</th>
+                                            <th scope="col" class="py-3 px-4">Responsibility</th>
+                                            <th scope="col" class="py-3 px-4">Involvement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-3 px-4 fw-semibold">Institution Rep</td>
+                                            <td class="py-3 px-4 text-muted">Connect with academic/research labs</td>
+                                            <td class="py-3 px-4"><span
+                                                    class="badge bg-secondary rounded-pill">Advisory</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 px-4 fw-semibold">Industry Rep</td>
+                                            <td class="py-3 px-4 text-muted">Industrial perspective & partnerships</td>
+                                            <td class="py-3 px-4"><span
+                                                    class="badge bg-secondary rounded-pill">Advisory</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 px-4 fw-semibold">Technical & Planning Lead</td>
+                                            <td class="py-3 px-4 text-muted">Roadmap, architecture, code quality</td>
+                                            <td class="py-3 px-4"><span
+                                                    class="badge bg-primary rounded-pill">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 px-4 fw-semibold">Documentation & Content Lead</td>
+                                            <td class="py-3 px-4 text-muted">Docs, tutorials, website</td>
+                                            <td class="py-3 px-4"><span
+                                                    class="badge bg-primary rounded-pill">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 px-4 fw-semibold">Community & Engagement Lead</td>
+                                            <td class="py-3 px-4 text-muted">Outreach, transparency, engagement</td>
+                                            <td class="py-3 px-4"><span
+                                                    class="badge bg-primary rounded-pill">Active</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm mt-4 p-4">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-shield-alt fs-5 text-muted me-3 mt-1"></i>
+                            <div>
+                                <h4 class="h5 fw-semibold">Decision Model</h4>
+                                <p class="text-sm text-muted mb-0">Community input is encouraged; final decisions rest
+                                    with the Internals. Participation does not create legal obligations or employment
+                                    rights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Tools Section -->
+    <section id="tools" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Tools</h2>
+                <p class="lead text-muted">Open-source tools for reproducible computational research</p>
+            </div>
+            <div class="row g-4">
+                <!-- Tool Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4 shadow-sm feature-card">
+                        <h3 class="h4 fw-semibold mb-3">LwFlow</h3>
+                        <p class="text-muted mb-4">
+                            A generalized Experiment Management Framework.
+                        </p>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center">
+                            <i class="fab fa-github me-2"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                <!-- Tool Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4 shadow-sm feature-card">
+                        <h3 class="h4 fw-semibold mb-3">PyTorchLabFlow</h3>
+                        <p class="text-muted mb-4">Deep Learning Experiment Management Framework</p>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center">
+                            <i class="fab fa-github me-2"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contributing Section -->
+    <section id="contribute" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Contributing</h2>
+                <p class="lead text-muted">Open to all contributors, with recognition for effort and impact</p>
+            </div>
+            <div class="row g-4">
+                <!-- Contributor -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card p-4 shadow-sm feature-card">
+                        
+                        <h3 class="h5 fw-semibold mb-2">Contributor</h3>
+                        <p class="text-sm text-muted mb-3">Code, docs, issues</p>
+                        <span class="badge text-dark border border-secondary bg-light">README / credits</span>
+                    </div>
+                </div>
+
+                <!-- Community Maintainer -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card p-4 shadow-sm feature-card">
+                    
+                        <h3 class="h5 fw-semibold mb-2">Community Maintainer</h3>
+                        <p class="text-sm text-muted mb-3">Regular contributor with partial access</p>
+                        <span class="badge text-dark border border-secondary bg-light">Website mention</span>
+                    </div>
+                </div>
+
+                <!-- Collaborator / Partner -->
+                
+
+                <!-- Internal -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card p-4 shadow-sm feature-card">
+                        
+                        <h3 class="h5 fw-semibold mb-2">Internal</h3>
+                        <p class="text-sm text-muted mb-3">Core team guiding direction</p>
+                        <span class="badge text-dark border border-secondary bg-light">Governance rights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section-padding bg-light d-none">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Resources</h2>
+                <p class="lead text-muted">Learn, explore, and stay updated with our community</p>
+            </div>
+            <div class="row g-4">
+                <!-- Tutorials -->
+                <div class="col-lg-4">
+                    <div class="card p-4 shadow-sm h-100">
+                        
+                        <h3 class="h4 fw-semibold mb-4">Tutorials</h3>
+                        <p class="text-muted mb-4">Step-by-step guides for getting started with ExpFace tools and
+                            workflows.</p>
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action rounded-md mb-2">
+                                <p class="mb-0 fw-semibold">Tutorial Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action rounded-md">
+                                <p class="mb-0 fw-semibold">Tutorial Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog -->
+                <div class="col-lg-4">
+                    <div class="card p-4 shadow-sm h-100">
+                        
+                        <h3 class="h4 fw-semibold mb-4">Blog</h3>
+                        <p class="text-muted mb-4">Updates, insights, and stories from the ExpFace community.</p>
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action rounded-md mb-2">
+                                <p class="mb-0 fw-semibold">Blog Post Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action rounded-md">
+                                <p class="mb-0 fw-semibold">Blog Post Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decisions -->
+                <div class="col-lg-4">
+                    <div class="card p-4 shadow-sm h-100">
+                        
+                        <h3 class="h4 fw-semibold mb-4">Decisions</h3>
+                        <p class="text-muted mb-4">Transparent record of governance decisions and community discussions.
+                        </p>
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action rounded-md mb-2">
+                                <p class="mb-0 fw-semibold">Decision Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action rounded-md">
+                                <p class="mb-0 fw-semibold">Decision Title</p>
+                                <small class="text-muted">Coming soon</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Build the Future of Research?</h2>
+                    <p class="lead text-muted mb-5">Join our growing community of researchers, developers, and
+                        institutions building transparent, open infrastructure for science.</p>
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        <a href="#" class="btn btn-primary btn-lg rounded-md shadow-lg d-flex align-items-center">
+                            <i class="fab fa-github me-2"></i> View on GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary btn-lg rounded-md">
+                            Join Community
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="" style="background:#858fbe">
+        <div class="container ">
+            <div class="row g-4 text-white">
+                <div class="col-md-5">
+                    <a class="navbar-brand d-flex align-items-center fw-bold text-white mb-3" href="#">
+                        <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
+                    </a>
+                    <p class="text-muted small mb-4">Open infrastructure for reproducible computational research</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted fs-5"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-muted fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted fs-5"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-muted fs-5"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3">
+                            <h5 class="mb-3 text-light">Resources</h5>
+                            <ul class="list-unstyled small text-muted">
+                                <li><a href="#resources" class="text-muted text-decoration-none">Tutorials</a></li>
+                                <li><a href="#resources" class="text-muted text-decoration-none">Blogs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h5 class="mb-3 text-light">Community</h5>
+                            <ul class="list-unstyled small text-muted">
+                                <li><a href="#" class="text-muted text-decoration-none">GitHub</a></li>
+                                <li><a href="#contribute" class="text-muted text-decoration-none">Contribute</a></li>
+                                <li><a href="#resources" class="text-muted text-decoration-none">Decisions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h5 class="mb-3 text-light">Tools</h5>
+                            <ul class="list-unstyled small text-muted">
+                                <li><a href="#tools" class="text-muted text-decoration-none">Browse Tools</a></li>
+                                <li><a href="#" class="text-muted text-decoration-none">API Reference</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h5 class="mb-3 text-light">About</h5>
+                            <ul class="list-unstyled small text-muted">
+                                <li><a href="#mission" class="text-muted text-decoration-none">Mission</a></li>
+                                <li><a href="#governance" class="text-muted text-decoration-none">Governance</a></li>
+                                <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="bg-secondary bg-opacity-25 rounded-md p-3 mb-4">
+                <p class="small text-muted mb-0"><strong>Disclaimer:</strong> ExpFace is an informal initiative until
+                    legally registered. Participation does not confer employment, partnership, or financial rights.
+                    Contributions remain under their original open-source licenses; submission implies agreement to
+                    license terms.</p>
+            </div>
+            <p class="text-center small text-muted mb-0">© 2025 ExpFace — Open, transparent, and collaborative research
+                infrastructure for the next era of science.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS - REPLACE WITH LOCAL PATHS FOR OFFLINE USE -->
+    <script src="src/global/js/jquery-1.9.1.min.js" ></script>
+    <script src="src/global/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery for Smooth Scrolling -->
+    <script src="src/index/"></script>
+</body>
+
+</html>
