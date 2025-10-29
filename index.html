@@ -19,162 +19,222 @@
 
 <body>
 
-<!-- Navigation Bar (Sticky Top) -->
-<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm py-3">
-  <div class="container">
-    
-    <!-- Brand -->
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
-    </a>
+    <!-- Navigation Bar (Sticky Top) -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+        
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
+        </a>
 
-    <!-- Toggler -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Toggler -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Navigation Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#contribute">Contribute</a></li>
-        <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#tools">Tools</a></li>
-      </ul>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#contribute">Contribute</a></li>
+            <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#tools">Tools</a></li>
+        </ul>
 
-      <!-- GitHub Button -->
-      <a href="#" class="btn btn-primary rounded-md d-flex align-items-center ms-lg-3">
-        <i class="fab fa-github me-2"></i> GitHub
-      </a>
+        <!-- GitHub Button -->
+        <a href="#" class="btn btn-primary rounded-md d-flex align-items-center ms-lg-3">
+            <i class="fab fa-github me-2"></i> GitHub
+        </a>
+        </div>
     </div>
-  </div>
-</nav>
+    </nav>
 
 
-<!-- Hero Section -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
+    <!-- Hero Section -->
+    <section class="py-5 text-center bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <span class="badge bg-primary rounded-pill mb-4 py-2 px-3 text-uppercase fw-semibold d-inline-flex align-items-center">
+            <i class="fas fa-cogs me-1"></i> Research‑First Experiment Management
+            </span>
+            <p class="mb-4 fw-bold hero-title">
+            Manage and Compare Complex Research Workflows with Confidence
+            </p>
+            <p class="lead text-muted mb-2">
+            Your research environment just met its match. Swap modules, track arguments, compare thousands of variants — whether you’re changing a layer, dataset, or loss function.
+            </p>
+            <p class="lead text-muted mb-4">
+            From configuration to artifact, every part of your workflow becomes traceable, reproducible, and reusable.
+            </p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="#what-we-do" class="btn btn-primary btn-lg rounded-md d-flex align-items-center">
+                <i class="fab fa-github me-2"></i> Explore on GitHub
+            </a>
+            <a href="#what-we-do" class="btn btn-outline-secondary btn-lg rounded-md">
+                Learn More
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
 
-        <!-- Badge -->
-        <span class="badge bg-secondary rounded-pill mb-4 py-2 px-3 text-uppercase fw-semibold d-inline-flex align-items-center">
-          <i class="fas fa-sparkles me-1"></i> Open Infrastructure for Research
-        </span>
-
-        <!-- Main Heading -->
-        <h1 class="mb-4 display-4 fw-bold hero-title">
-          Open Infrastructure for Scientific Research
-        </h1>
-
-        <!-- Subheading -->
-        <p class="lead text-muted mb-5">
-          Accelerate scientific experimentation through open-source tools, transparent governance, 
-          and collaborative innovation. Make research reproducible, accessible, and community-driven.
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">How We Empower Your Research</h2>
+        <p class="lead text-muted">
+            Built for researchers who tinker, probe, and iterate — our framework puts biology-lab discipline into code-lab workflows.
         </p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Research Tools Section -->
-<section id="tools" class="py-5 bg-light">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold mb-3">Tools</h2>
-      <p class="lead text-muted">Open-source tools for reproducible computational research</p>
-    </div>
-
-    <!-- Tool Cards -->
-    <div class="row g-4 justify-content-center">
-
-      <!-- Tool Card 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
-          <div class="mb-3">
-            <i class="fas fa-flask text-primary fs-2"></i>
-          </div>
-          <h3 class="h4 fw-semibold mb-3">LwFlow</h3>
-          <p class="text-muted mb-4">
-            A generalized Experiment Management Framework.
-          </p>
-          <a href="#"
-             class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center mx-auto">
-            <i class="fab fa-github me-2"></i> View Repository
-          </a>
         </div>
-      </div>
 
-      <!-- Tool Card 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
-          <div class="mb-3">
-            <i class="fas fa-brain text-primary fs-2"></i>
-          </div>
-          <h3 class="h4 fw-semibold mb-3">PyTorchLabFlow</h3>
-          <p class="text-muted mb-4">
-            Deep Learning Experiment Management Framework.
-          </p>
-          <a href="#"
-             class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center mx-auto">
-            <i class="fab fa-github me-2"></i> View Repository
-          </a>
+        <div class="row g-4 justify-content-center">
+
+        <!-- Modular Components -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 text-center">
+            <div class="mb-3">
+                <i class="fas fa-th-large text-primary fs-2"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Modular Components</h3>
+            <p class="text-muted">
+                Define each part of your workflow — dataset, layer, optimizer, metric — as a reusable Component. Swap one block and instantly test a new hypothesis.
+            </p>
+            </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contributing Section -->
-<section id="contribute" class="py-5 bg-light">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold mb-3">Contributing</h2>
-      <p class="lead text-muted">
-        Open to all contributors, with recognition for effort and impact
-      </p>
-    </div>
-
-    <!-- Contribution Roles -->
-    <div class="row g-4 justify-content-center">
-      
-      <!-- Contributor -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-          <div class="mb-3">
-            <i class="fas fa-code-branch text-primary fs-2"></i>
-          </div>
-          <h3 class="h5 fw-semibold mb-2">Contributor</h3>
-          <p class="text-muted small mb-3">Code, documentation, and issue contributions</p>
-          <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
-            Learn More
-          </a>
+        <!-- Experiment Tracking & Comparison -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 text-center">
+            <div class="mb-3">
+                <i class="fas fa-search-plus text-primary fs-2"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Track & Compare Experiments</h3>
+            <p class="text-muted">
+                When you have dozens of runs, dozens of tweaks — you still know which version used that dropout layer or which split. Find similar experiments in one click.
+            </p>
+            </div>
         </div>
-      </div>
 
-      <!-- Community Maintainer -->
-      <div class="col-sm-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-          <div class="mb-3">
-            <i class="fas fa-users-cog text-primary fs-2"></i>
-          </div>
-          <h3 class="h5 fw-semibold mb-2">Community Maintainer</h3>
-          <p class="text-muted small mb-3">Regular contributor with partial access and responsibilities</p>
-          <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
-            Learn More
-          </a>
+        <!-- Reproducibility & Workflows -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 text-center">
+            <div class="mb-3">
+                <i class="fas fa-archive text-primary fs-2"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Reproducible Workflows</h3>
+            <p class="text-muted">
+                Store configuration, code, artifacts, and experiments in a unified system. Pick up where you left off — no mystery folders, no “which version did I run?” chaos.
+            </p>
+            </div>
         </div>
-      </div>
 
+        </div>
     </div>
-  </div>
-</section>
+    </section>
+
+
+
+
+    <!-- Research Tools Section -->
+    <section id="tools" class="py-5 bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Tools</h2>
+        <p class="lead text-muted">Open-source tools for reproducible computational research</p>
+        </div>
+
+        <!-- Tool Cards -->
+        <div class="row g-4 justify-content-center">
+
+        <!-- Tool Card 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+            <div class="mb-3">
+                <i class="fas fa-flask text-primary fs-2"></i>
+            </div>
+            <h3 class="h4 fw-semibold mb-3">LwFlow</h3>
+            <p class="text-muted mb-4">
+                A generalized Experiment Management Framework.
+            </p>
+            <a href="#"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center mx-auto">
+                <i class="fab fa-github me-2"></i> View Repository
+            </a>
+            </div>
+        </div>
+
+        <!-- Tool Card 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+            <div class="mb-3">
+                <i class="fas fa-brain text-primary fs-2"></i>
+            </div>
+            <h3 class="h4 fw-semibold mb-3">PyTorchLabFlow</h3>
+            <p class="text-muted mb-4">
+                Deep Learning Experiment Management Framework.
+            </p>
+            <a href="#"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center mx-auto">
+                <i class="fab fa-github me-2"></i> View Repository
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- Contributing Section -->
+    <section id="contribute" class="py-5 bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Contributing</h2>
+        <p class="lead text-muted">
+            Open to all contributors, with recognition for effort and impact
+        </p>
+        </div>
+
+        <!-- Contribution Roles -->
+        <div class="row g-4 justify-content-center">
+        
+        <!-- Contributor -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
+            <div class="mb-3">
+                <i class="fas fa-code-branch text-primary fs-2"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Contributor</h3>
+            <p class="text-muted small mb-3">Code, documentation, and issue contributions</p>
+            <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
+                Learn More
+            </a>
+            </div>
+        </div>
+
+        <!-- Community Maintainer -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
+            <div class="mb-3">
+                <i class="fas fa-users-cog text-primary fs-2"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Community Maintainer</h3>
+            <p class="text-muted small mb-3">Regular contributor with partial access and responsibilities</p>
+            <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
+                Learn More
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
 
     
     <!-- CTA Section -->

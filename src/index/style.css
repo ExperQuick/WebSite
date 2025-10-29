@@ -81,22 +81,29 @@
             border-radius: 50rem !important;
         }
 
-        .navbar-custom {
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-        }
+.navbar-custom {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
 
-        .hero-title {
-            background: linear-gradient(to right, var(--bs-primary), var(--bs-secondary), var(--bs-success));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3rem;
-            font-weight: 700;
-        }
+.hero-title {
+    background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary), var(--bs-success));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    transition: background 1.5s ease-in-out;
+}
 
-        @media (min-width: 992px) {
-            .hero-title {
-                font-size: 4.5rem;
-            }
-        }
+/* Hero buttons hover */
+.btn-primary:hover {
+    background-color: #0b5ed7; /* darker blue */
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: var(--bs-secondary);
+    transition: all 0.3s ease;
+}
