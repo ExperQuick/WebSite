@@ -4,25 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>ExperQuick — Open Infrastructure for Scientific Research</title>
-    <meta name="title" content="ExperQuick — Open Infrastructure for Scientific Research">
+    <title>ExpFace — Open Infrastructure for Scientific Research</title>
     <meta name="description"
-        content="ExperQuick is an open-source initiative enabling transparent, scalable, and collaborative scientific experimentation. Build, manage, and reproduce research workflows with ease.">
-
-        <!-- Keywords (SEO) -->
-    <meta name="keywords"
-        content="ExperQuick, experiment management, reproducible research, open-source science, computational research, experiment tracking, PyTorchLabFlow, LwFlow, research infrastructure, scientific workflows">
-
-    <!-- Author & Language -->
-    <meta name="author" content="ExperQuick Community">
-    <meta name="language" content="en">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-
-
-
+        content="Open-source initiative for transparent, scalable, and collaborative scientific experimentation.">
 
     <!-- Bootstrap CSS - REPLACE WITH LOCAL PATH FOR OFFLINE USE -->
     <link href="src/global/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +18,14 @@
     <style>
 
         /* Common Title Style for all other section titles */
-
+.section-title {
+    color: var(--bs-primary); /* You can change this color as needed */
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem; /* Adjust size for other section titles */
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.05em;
+}
     </style>
 </head>
 
@@ -46,7 +37,7 @@
         
         <!-- Brand -->
         <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-        <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExperQuick
+        <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
         </a>
 
         <!-- Toggler -->
@@ -72,54 +63,21 @@
 
 
     <!-- Hero -->
-<!-- Hero -->
-<!-- Hero Section with Refined Content -->
 <section class="py-5 text-center bg-light">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <!-- Original Hero Badge and Title -->
-                <span class="badge bg-primary rounded-pill mb-4 py-2 px-3 fw-semibold d-inline-flex align-items-center">
-                    Smooth Interface to Research Chaos
+                <span class="badge bg-primary rounded-pill mb-4 py-2 px-3  fw-semibold d-inline-flex align-items-center">
+                    Smooth Interface to research Chaos
                 </span>
                 <h1 class="mb-4 fw-bold hero-title">
                     Simplifying Research, Amplifying Discovery
                 </h1>
                 <p class="lead text-muted mb-5">
-                    ExperQuick is a <b>community-driven initiative</b> that transforms the way researchers manage experiments. We provide frameworks, tools, and shared best practices so you can focus on insights, not the chaos of managing configurations, code, and results.
+                    ExpFace is a <b>community-driven initiative</b> supporting researchers at every step. We provide frameworks, tools, and shared best practices so you can focus on insights, not the complexity of managing experiments. 
+                    Contribute, collaborate, and grow the ecosystem together.
                 </p>
-
-                <!-- Refined Content: Transition to What We Do -->
-                <p class="text-muted mb-4">
-                    Research often feels like a maze of scattered experiments, disconnected code versions, and inconsistent results. ExperQuick brings clarity with integrated workflows, ensuring reproducibility and making collaboration effortless, so you can focus on innovation.
-                </p>
-
-                <!-- Feature Highlights: Streamlined Workflow, Reproducibility, Collaboration -->
-                <div class="row mt-4">
-                    <div class="col-12 col-md-4 mb-3">
-                        <div class="feature-box p-3 rounded-3 shadow-sm">
-                            <h4 class="fw-semibold">Streamlined Workflow</h4>
-                            <p class="text-muted">Easily manage experiments and avoid searching for the right code or result.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 mb-3">
-                        <div class="feature-box p-3 rounded-3 shadow-sm">
-                            <h4 class="fw-semibold">Reproducibility</h4>
-                            <p class="text-muted">Ensure consistent results across experiments with fully reproducible workflows.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 mb-3">
-                        <div class="feature-box p-3 rounded-3 shadow-sm">
-                            <h4 class="fw-semibold">Seamless Collaboration</h4>
-                            <p class="text-muted">Easily share results, configurations, and code with your team.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Combined CTA -->
-                <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
+                <div class="d-flex justify-content-center flex-wrap gap-3">
                     <a href="#tools" class="btn btn-primary btn-lg rounded-md shadow-sm d-flex align-items-center">
                         <i class="fas fa-microscope me-2"></i> Explore Our Tools
                     </a>
@@ -130,8 +88,95 @@
             </div>
         </div>
     </div>
-</section>
 
+
+
+
+
+
+
+
+
+
+
+<!-- Hero Additional Content -->
+<div class="hero-additional-content mt-5 bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                
+                <!-- Problem Statement: Question to Engage -->
+                <h3 class="text-dark mb-4 fw-bold">Tired of juggling fragmented code, scattered configurations, and lost results?</h3>
+
+                <!-- Challenge Description: Engage the User with Frustration -->
+                <p class="text-muted mb-4">
+                    Research often feels like navigating a maze—experiments are buried in files, code versions don’t sync, and results lose their connections over time.
+                    It's frustrating, time-consuming, and can derail your progress.
+                </p>
+
+                <!-- Solution: Clear Benefits -->
+                <p class="text-muted mt-4">
+                    <strong>ExpFace</strong> is here to simplify that chaos. With our platform, your research workflow becomes:
+                </p>
+
+                <div class="row mt-4">
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="feature-box p-3 rounded-3 shadow-sm">
+                            <h4 class="fw-semibold">Streamlined Workflow</h4>
+                            <p class="text-muted">Easily manage your experiments and avoid wasting time searching for the right code or result.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="feature-box p-3 rounded-3 shadow-sm">
+                            <h4 class="fw-semibold">Reproducibility</h4>
+                            <p class="text-muted">Ensure consistent results across experiments, with fully reproducible workflows every time.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="feature-box p-3 rounded-3 shadow-sm">
+                            <h4 class="fw-semibold">Seamless Collaboration</h4>
+                            <p class="text-muted">Share results, configurations, and code easily with your team and collaborators without the hassle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action: Encourage Next Steps -->
+                <div class="mt-5">
+                    <a href="#tools" class="btn btn-primary btn-lg rounded-md shadow-sm d-flex align-items-center">
+                        <i class="fas fa-microscope me-2"></i> Start Simplifying Your Research
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
 
 
 
@@ -152,7 +197,7 @@
             <div class="col-lg-8">
                 <div class="blockquote p-4 bg-light shadow-sm border-start border-5 border-primary rounded-3">
                     <p class="mb-0 fs-5 fw-medium text-dark">
-                        <b>ExperQuick</b> provides <b>frameworks</b> to manage everything in your computational R&D. We offer the core tools and methodology to turn configuration chaos into clear, actionable data.
+                        <b>ExpFace</b> provides <b>frameworks</b> to manage everything in your computational R&D. We offer the core tools and methodology to turn configuration chaos into clear, actionable data.
                     </p>
                     <footer class="blockquote-footer mt-3">
                         <strong class="text-primary">Specilities :</strong>
@@ -371,7 +416,7 @@
         <!-- Brand and description -->
         <div class="col-md-6 mb-3 mb-md-0">
             <a href="#" class="navbar-brand d-inline-flex align-items-center fw-bold text-white mb-2">
-            <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExperQuick
+            <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExpFace
             </a>
             <p class="text-light small mb-0">
             Open infrastructure for reproducible computational research
@@ -392,7 +437,7 @@
         <!-- Footer bottom -->
         <div class="text-center">
         <p class="small text-white-50 mb-0">
-            © 2025 <strong>ExperQuick</strong> — Open, transparent, and collaborative research infrastructure for the next era of science.
+            © 2025 <strong>ExpFace</strong> — Open, transparent, and collaborative research infrastructure for the next era of science.
         </p>
         </div>
     </div>

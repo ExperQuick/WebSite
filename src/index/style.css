@@ -1,85 +1,85 @@
 :root {
-            --bs-primary: #3c528c;
-            /* Dark Blue/Primary */
-            --bs-secondary: #4a90e2;
-            /* Secondary Blue */
-            --bs-success: #3cbe8d;
-            /* Accent/Greenish */
-            --bs-border-radius: 0.75rem;
-        }
+    --bs-primary: #3c528c;
+    /* Dark Blue/Primary */
+    --bs-secondary: #4a90e2;
+    /* Secondary Blue */
+    --bs-success: #3cbe8d;
+    /* Accent/Greenish */
+    --bs-border-radius: 0.75rem;
+}
 
-        /* Overrides to match the original theme's colors and fonts */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfbf8;
-        }
+/* Overrides to match the original theme's colors and fonts */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfbf8;
+}
 
-        .text-primary {
-            color: var(--bs-primary) !important;
-        }
+.text-primary {
+    color: var(--bs-primary) !important;
+}
 
-        .text-secondary {
-            color: var(--bs-secondary) !important;
-        }
+.text-secondary {
+    color: var(--bs-secondary) !important;
+}
 
-        .text-accent {
-            color: var(--bs-success) !important;
-        }
+.text-accent {
+    color: var(--bs-success) !important;
+}
 
-        .bg-primary {
-            background-color: var(--bs-primary) !important;
-        }
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
 
-        .bg-secondary {
-            background-color: var(--bs-secondary) !important;
-        }
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+}
 
-        /* Button Customization */
-        .btn-primary {
-            background-color: var(--bs-primary);
-            border-color: var(--bs-primary);
-        }
+/* Button Customization */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
 
-        .btn-primary:hover {
-            background-color: #2c3a64;
-            border-color: #2c3a64;
-        }
+.btn-primary:hover {
+    background-color: #2c3a64;
+    border-color: #2c3a64;
+}
 
-        .btn-outline-secondary {
-            color: var(--bs-secondary);
-            border-color: var(--bs-secondary);
-        }
+.btn-outline-secondary {
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
 
-        .btn-outline-secondary:hover {
-            background-color: var(--bs-secondary);
-            color: white;
-            border-color: var(--bs-secondary);
-        }
+.btn-outline-secondary:hover {
+    background-color: var(--bs-secondary);
+    color: white;
+    border-color: var(--bs-secondary);
+}
 
-        /* Layout and Component Styling */
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
+/* Layout and Component Styling */
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 
-        .feature-card {
-            transition: all 0.3s;
-            height: 100%;
-        }
+.feature-card {
+    transition: all 0.3s;
+    height: 100%;
+}
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-        }
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
 
-        .card {
-            border-radius: var(--bs-border-radius);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
+.card {
+    border-radius: var(--bs-border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-        .rounded-pill {
-            border-radius: 50rem !important;
-        }
+.rounded-pill {
+    border-radius: 50rem !important;
+}
 
 .navbar-custom {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -97,7 +97,8 @@
 
 /* Hero buttons hover */
 .btn-primary:hover {
-    background-color: #0b5ed7; /* darker blue */
+    background-color: #0b5ed7;
+    /* darker blue */
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
@@ -106,4 +107,15 @@
     color: #fff;
     background-color: var(--bs-secondary);
     transition: all 0.3s ease;
+}
+
+.section-title {
+    color: var(--bs-primary);
+    /* You can change this color as needed */
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    /* Adjust size for other section titles */
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.05em;
 }

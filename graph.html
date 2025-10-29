@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated SVG Graph</title>
+  <style>
+    svg {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid black;
+    }
+
+    .node {
+      stroke-width: 2;
+      transition: transform 0.5s ease;
+    }
+
+    /* Animation for moving nodes */
+    @keyframes moveNodes {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(100px, 50px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    
+    .moving {
+      animation: moveNodes 4s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <svg id="network">
+    <!-- The nodes and edges will be inserted here by JavaScript -->
+  </svg>
+
+  <script>
+    // Node and Edge Data from your structure
+    const nodesData = [
+      { id: 'sd0', label: 'sd0', color: '#FF0000', x: 100, y: 100 }, // Red Nodes
+      { id: 'sd1', label: 'sd1', color: '#FF0000', x: 200, y: 100 },
+      { id: 'sd3', label: 'sd3', color: '#FF0000', x: 300, y: 100 },
+      { id: 'cm1', label: 'cm1', color: '#00CED1', x: 100, y: 300 }, // Teal Nodes
+      { id: 'cm2', label: 'cm2', color: '#00CED1', x: 200, y: 300 },
+      { id: 'cl1', label: 'cl1', color: '#00CED1', x: 300, y: 300 },
+      { id: 'e1', label: 'e1', color: '#FFA07A', x: 100, y: 500 }, // Event Nodes
+      { id: 'e2', label: 'e2', color: '#FFA07A', x: 200, y: 500 },
+      { id: 't1', label: 't1', color: '#ADD8E6', x: 400, y: 500 }, // Blue Nodes
+      { id: 't2', label: 't2', color: '#ADD8E6', x: 500, y: 500 },
+      { id: 'qe2r1', label: 'qe2r1', color: '#FAFAD2', x: 100, y: 700 }, // Cream Nodes
+      { id: 'qe2r2', label: 'qe2r2', color: '#FAFAD2', x: 200, y: 700 },
+      { id: 'o1', label: 'o1', color: '#32CD32', x: 400, y: 700 }, // Green Nodes
+      { id: 'o2', label: 'o2', color: '#32CD32', x: 500, y: 700 }
+    ];
+
+    const edgesData = [
+      { from: 'sd0', to: 'cm1' },
+      { from: 'sd0', to: 'cl1' },
+      { from: 'cm1', to: 'e1' },
+      { from: 'cm2', to: 'e2' },
+      { from: 'e1', to: 't1' },
+      { from: 'e2', to: 't2' },
+      { from: 't1', to: 'qe2r1' },
+      { from: 't2', to: 'qe2r2' },
+      { from: 'qe2r1', to: 'o1' },
+      { from: 'qe2r2', to: 'o2' }
+    ];
+
+    // Function to create an SVG node element
+    function createNode(nodeData) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      node.setAttribute("id", nodeData.id);
+      node.setAttribute("cx", nodeData.x);
+      node.setAttribute("cy", nodeData.y);
+      node.setAttribute("r", 20);
+      node.setAttribute("fill", nodeData.color);
+      node.classList.add('node');
+      return node;
+    }
+
+    // Function to create an SVG edge element
+    function createEdge(fromNode, toNode) {
+      const edge = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      edge.setAttribute("x1", fromNode.x);
+      edge.setAttribute("y1", fromNode.y);
+      edge.setAttribute("x2", toNode.x);
+      edge.setAttribute("y2", toNode.y);
+      edge.setAttribute("stroke", "#FF8C00"); // Orange color for edges
+      edge.setAttribute("stroke-width", 2);
+      return edge;
+    }
+
+    // Adding nodes and edges to the SVG container
+    const svgContainer = document.getElementById('network');
+
+    // Create nodes
+    const nodes = {};
+    nodesData.forEach(nodeData => {
+      const nodeElement = createNode(nodeData);
+      svgContainer.appendChild(nodeElement);
+      nodes[nodeData.id] = nodeData; // Storing node data for edge creation
+    });
+
+    // Create edges
+    edgesData.forEach(edgeData => {
+      const fromNode = nodes[edgeData.from];
+      const toNode = nodes[edgeData.to];
+      const edgeElement = createEdge(fromNode, toNode);
+      svgContainer.appendChild(edgeElement);
+    });
+
+    // Add random movement to nodes
+    setInterval(() => {
+      nodesData.forEach(nodeData => {
+        const nodeElement = document.getElementById(nodeData.id);
+        const randomX = Math.random() * window.innerWidth;
+        const randomY = Math.random() * window.innerHeight;
+        nodeElement.setAttribute("cx", randomX);
+        nodeElement.setAttribute("cy", randomY);
+      });
+    }, 2000); // Move every 2 seconds
+
+  </script>
+</body>
+</html>
