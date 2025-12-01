@@ -1,0 +1,51 @@
+/* ------------------------------ */
+/* HERO SECTION                   */
+/* ------------------------------ */
+
+.hero {
+  padding: 120px 7%;
+  background: linear-gradient(135deg, #f2f7ff, #e6eeff);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+
+/* ------------------------------ */
+/* HOMEPAGE GRID LAYOUTS          */
+/* ------------------------------ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.logo-strip {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo-strip img {
+  height: 55px;
+  opacity: 0.85;
+  transition: .2s;
+}
+
+.logo-strip img:hover {
+  opacity: 1;
+}

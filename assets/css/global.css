@@ -1,0 +1,104 @@
+/* ------------------------------ */
+/* GLOBAL RESET                   */
+/* ------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  color: #333;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+
+/* ------------------------------ */
+/* LAYOUT UTILITIES               */
+/* ------------------------------ */
+
+.section {
+  padding: 60px 7%;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #222;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.1rem; margin-bottom: 20px; }
+h3 { font-size: 1.3rem; }
+
+p { font-size: 1rem; opacity: 0.85; }
+
+.view-all {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0066ff;
+  font-weight: 600;
+}
+
+.btn {
+  background: #0066ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #0050d4;
+}
+
+
+/* ------------------------------ */
+/* NAVBAR                         */
+/* ------------------------------ */
+
+header nav {
+  width: 100%;
+  padding: 18px 7%;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #0066ff;
+}
+
+
+/* ------------------------------ */
+/* FOOTER                         */
+/* ------------------------------ */
+
+footer {
+  padding: 40px 7%;
+  background: black;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}

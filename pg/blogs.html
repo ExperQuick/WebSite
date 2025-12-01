@@ -1,0 +1,16 @@
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">All Blogs</h2>
+        <div id="blogs-list" class="row g-4"></div>
+    </div>
+</section>
+
+<script>
+$(function() {
+    $.getJSON('/data/items.json', function(data) {
+        data.filter(i => i.type === "blog").forEach(x => {
+            $('#blogs-list').append(cardBlog(x));
+        });
+    });
+});
+</script>

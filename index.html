@@ -1,581 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1TVEVL321"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ExperQuick – Structured Experimentation</title>
 
-    gtag('config', 'G-T1TVEVL321');
-    </script>
+    <!-- CSS + jQuery + Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Primary Meta Tags -->
-    <title>ExperQuick — Open Infrastructure for Scientific Research</title>
-    <meta name="title" content="ExperQuick — Open Infrastructure for Scientific Research">
-    <meta name="description"
-        content="ExperQuick is an open-source initiative enabling transparent, scalable, and collaborative scientific experimentation. Build, manage, and reproduce research workflows with ease.">
-
-    <!-- Keywords (SEO) -->
-    <meta name="keywords"
-        content="ExperQuick, experiment management, reproducible research, open-source science, computational research, experiment tracking, PyTorchLabFlow, PyLabFlow, research infrastructure, scientific workflows">
-
-    <!-- Author & Language -->
-    <meta name="author" content="ExperQuick Community">
-    <meta name="language" content="en">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <link rel="canonical" href="https://experquick.org/">
-
-    <!-- Open Graph (for social sharing) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://experquick.org/">
-    <meta property="og:title" content="ExperQuick — Open Infrastructure for Scientific Research">
-    <meta property="og:description" content="ExperQuick is an open-source initiative enabling transparent, scalable, and collaborative scientific experimentation.">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://experquick.org/">
-    <meta property="twitter:title" content="ExperQuick — Open Infrastructure for Scientific Research">
-    <meta property="twitter:description" content="Open-source infrastructure for transparent, scalable, and collaborative scientific experimentation.">
-
-    <!-- Bootstrap CSS - REPLACE WITH LOCAL PATH FOR OFFLINE USE -->
-    <link href="src/global/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles to Emulate Original Theme and ensure rounded corners/shadows -->
-    <link href="src/index/style.css" rel="stylesheet">
-    <!-- Font Awesome for Icons (using CDN for simplicity, replace with local assets if needed) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        /* Common Title Style for all other section titles */
-    </style>
+    <link rel="stylesheet" href="assets/css/theme.css">
 </head>
-
 
 <body>
 
-    <!-- Navigation Bar (Sticky Top) -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm py-3">
-        <div class="container">
-
-            <!-- Brand -->
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-                <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExperQuick
-            </a>
-
-            <!-- Toggler -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#contribute">Contribute</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link scroll-link fw-medium" href="#tools">Tools</a></li>
-                </ul>
-
-                <!-- GitHub Button -->
-                <a href="https://github.com/ExperQuick" class="btn btn-primary rounded-md d-flex align-items-center ms-lg-3">
-                    <i class="fab fa-github me-2"></i> GitHub
-                </a>
-            </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="/">ExperQuick</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navMenu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="/pg/blogs.html" class="nav-link">Blogs</a></li>
+                <li class="nav-item"><a href="/pg/tools.html" class="nav-link">Tools</a></li>
+                <li class="nav-item"><a href="/pg/events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="/pg/sponsors.html" class="nav-link">Sponsors</a></li>
+                <li class="nav-item"><a href="/pg/collaborators.html" class="nav-link">Collaborators</a></li>
+            </ul>
         </div>
-    </nav>
-
-
-    <!-- Hero -->
-    <section class="py-5 text-center bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <!-- Original Hero Badge and Title -->
-                    <span
-                        class="badge bg-primary rounded-pill mb-4 py-2 px-3 fw-semibold d-inline-flex align-items-center">
-                        Smooth Interface to Research Chaos
-                    </span>
-                    <h1 class="mb-4 fw-bold hero-title">
-                        Simplifying Research, Amplifying Discovery
-                    </h1>
-                    <p class="lead text-muted mb-5">
-                        ExperQuick is a <b>community-driven initiative</b> that transforms the way researchers manage
-                        experiments. We provide frameworks, tools, and shared best practices so you can focus on
-                        insights, not the chaos of managing configurations, code, and results.
-                    </p>
-
-                    <!-- Refined Content: Transition to What We Do -->
-                    <p class="text-muted mb-4">
-                        Research often feels like a maze of scattered experiments, disconnected code versions, and
-                        inconsistent results. ExperQuick brings clarity with integrated workflows, ensuring
-                        reproducibility and making collaboration effortless, so you can focus on innovation.
-                    </p>
-
-                    <!-- Feature Highlights: Streamlined Workflow, Reproducibility, Collaboration -->
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="feature-box p-3 rounded-3 shadow-sm">
-                                <h4 class="fw-semibold">Streamlined Workflow</h4>
-                                <p class="text-muted">Easily manage experiments and avoid searching for the right code
-                                    or result.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="feature-box p-3 rounded-3 shadow-sm">
-                                <h4 class="fw-semibold">Reproducibility</h4>
-                                <p class="text-muted">Ensure consistent results across experiments with fully
-                                    reproducible workflows.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="feature-box p-3 rounded-3 shadow-sm">
-                                <h4 class="fw-semibold">Seamless Collaboration</h4>
-                                <p class="text-muted">Easily share results, configurations, and code with your team.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Combined CTA -->
-                    <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
-                        <a href="#tools" class="btn btn-primary btn-lg rounded-md shadow-sm d-flex align-items-center">
-                            <i class="fas fa-microscope me-2"></i> Explore Our Tools
-                        </a>
-                        <a href="#cta" class="btn btn-outline-secondary btn-lg rounded-md">
-                            Join the Community
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- what we do -->
-    <section id="what-we-do" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold fw-bold section-title mb-3">The Universal Challenge of Research</h2>
-                <p class="lead text-muted">
-                    Every research breakthrough requires multiple trials—changing parameters, swapping out code, and
-                    iterating approaches until the requirements are met. We manage the frustration that comes with that
-                    process.
-                </p>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-lg-8">
-                    <div class="blockquote p-4 bg-light shadow-sm border-start border-5 border-primary rounded-3">
-                        <p class="mb-0 fs-5 fw-medium text-dark">
-                            <b>ExperQuick</b> provides <b>frameworks</b> to manage everything in your computational R&D.
-                            We offer the core tools and methodology to turn configuration chaos into clear, actionable
-                            data.
-                        </p>
-                        <footer class="blockquote-footer mt-3">
-                            <strong class="text-primary">Specilities :</strong>
-                            <ul class="list-unstyled small mt-2 mb-0">
-                                <li>Fully <b>domain-independent</b> (from AI to quantitative analysis).</li>
-                                <li>Completely <b>customizable</b> to fit your existing research codebase.</li>
-                                <li>Flexible for both single-experiment focus and large-scale parallel trials.</li>
-                                <li>Manage all your experiments in of <b>fixed number</b> dedicated *jupyter noteboks
-                                </li>
-                            </ul>
-                        </footer>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- how we do -->
-    <section id="how-we-do" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold mb-3">Key Principles</h2>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 feature-card text-center">
-                        <div class="mb-3">
-                            <i class="fas fa-layer-group text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Component Abstraction & Custom Workflows</h3>
-                        <p class="text-muted my-1">
-                            <b>Design workflows</b><br>with modular components.
-                        </p>
-                        <p class="text-muted my-1">
-
-                            <b>Track and reuse components</b><br>with a <b>modular approach</b>.
-                        </p>
-                        <p class="text-muted my-1">
-                            <b>Design once, use many times</b><br>maximizing efficiency.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 feature-card text-center">
-                        <div class="mb-3">
-                            <i class="fas fa-code text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-2">Declarative Code-to-Config for Architectural Sweeps</h3>
-                        <p class="text-muted my-1">
-                            <b>Transform large code blocks</b><br>into easy-to-manage configuration dictionaries.
-                        </p>
-                        <p class="text-muted my-1">
-                            <b>Perform architectural sweeps</b><br>not just parameter tuning.
-                        </p>
-                        <p class="text-muted my-1">
-                            <b>Maintain organization</b><br>and ensure <b>reproducibility</b>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-3 p-md-4 feature-card text-center">
-                        <div class="mb-3">
-                            <i class="fas fa-fingerprint text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-2">Ensuring Uniqueness & Reproducibility with Hashing</h3>
-                        <p class="text-muted my-1">
-                            <b>Unique hash generation</b><br>for each pipeline configuration.
-                        </p>
-                        <p class="text-muted my-1">
-                            <b>Reproducibility guaranteed</b><br>recreate experiments with precision.
-                        </p>
-                        <p class="text-muted my-1">
-                            <b>Capture all code blocks</b><br>and parameters in the hash.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Tools Section -->
-    <section id="tools" class="py-5 bg-light">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold mb-3">Tools</h2>
-                <p class="lead text-muted">Open-source tools for reproducible computational research</p>
-            </div>
-
-            <!-- Tool Cards -->
-            <div class="row g-4 justify-content-center">
-
-                <!-- Tool Card 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
-                        <div class="mb-3">
-                            <i class="fas fa-flask text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h4 fw-semibold mb-3">PyLabFlow</h3>
-                        <p class="text-muted mb-4">
-                            A generalized Experiment Management Framework.
-                        </p>
-                        <div class="d-flex justify-content-center gap-2 mt-3">
-
-                            <!-- GitHub Button -->
-                            <a href="https://github.com/ExperQuick/PyLabFlow"
-                                class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-                                <i class="fab fa-github me-2"></i> Repository
-                            </a>
-
-                            <!-- Documentation Button with SVG Icon -->
-                            <a href="https://pylabflow.readthedocs.io/"
-                                class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-                                <!-- Simple Document SVG Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text me-2" viewBox="0 0 16 16">
-                                    <path d="M5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM5 10a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6.5L14 4.5zM13 4.5L9.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
-                                </svg>
-                                Documentation
-                            </a>
-
-                        </div>
-
-
-                            
-                    </div>
-                </div>
-
-                <!-- Tool Card 2 -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section id="usecases" class="py-5 bg-light">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold mb-3">Use Cases</h2>
-                <p class="lead text-muted">Example Setups</p>
-            </div>
-
-            <!-- Tool Cards -->
-            <div class="row g-4 justify-content-center">
-
-                <!-- Tool Card 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
-
-                        <h3 class="h4 fw-semibold mb-3">Deep Learning Starter</h3>
-                        <p class="text-muted mb-4">
-                            This project shows a CNN pipeline to classify handwritten digits from the MNIST dataset.
-                        </p>
-                        <div class="d-flex justify-content-center gap-2 mt-3">
-
-                            <!-- GitHub Button -->
-                            <a href="https://github.com/ExperQuick/PLF_DL_SetUps/tree/main/Basic"
-                                class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-                                <i class="fab fa-github me-2"></i> View
-                            </a>
-
-                        </div>
-
-
-                            
-                    </div>
-                </div>
-
-                <!-- Tool Card 2 -->
-                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
-
-                        <h3 class="h4 fw-semibold mb-3">Machine Learning Setup</h3>
-                        <p class="text-muted mb-4">
-                            A machine learning pipeline for predicting diabetes progression.
-                        </p>
-                        <div class="d-flex justify-content-center gap-2 mt-3">
-
-                            <!-- GitHub Button -->
-                            <a href="https://github.com/ExperQuick/PLF_SetUps/tree/main/PLFML"
-                                class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-                                <i class="fab fa-github me-2"></i> View
-                            </a>
-
-                        </div>
-
-
-                            
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Contributing Section -->
-    <section id="contribute" class="py-5 bg-light">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold mb-3">Contributing</h2>
-                <p class="lead text-muted">
-                    Open to all contributors, with recognition for effort and impact
-                </p>
-            </div>
-
-            <!-- Contribution Roles -->
-            <div class="row g-4 justify-content-center">
-
-                <!-- Contributor -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-                        <div class="mb-3">
-                            <i class="fas fa-code-branch text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-2">Contributor</h3>
-                        <p class="text-muted small mb-3">Code, documentation, and issue contributions</p>
-                        <!-- <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
-                            Learn More
-                        </a> -->
-                    </div>
-                </div>
-
-                <!-- Community Maintainer -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-                        <div class="mb-3">
-                            <i class="fas fa-users-cog text-primary fs-2"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-2">Community Maintainer</h3>
-                        <p class="text-muted small mb-3">Regular contributor with partial access and responsibilities
-                        </p>
-                        <!-- <a href="#" class="badge bg-light text-dark border border-secondary rounded-pill">
-                            Learn More
-                        </a> -->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Blogs -->
-    <section id="blogs" class="py-5 bg-light">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold mb-3">Blogs</h2>
-                <p class="lead text-muted">
-                    Insights and tutorials published on Medium.
-                </p>
-            </div>
-
-            <!-- Single Blog Post -->
-            <div class="row justify-content-center flex-row-reverse">
-
-                <!-- Blog Post: Component in PyLabFlow -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="https://experquick.medium.com/introducing-component-in-pylabflow-58e00f4b24a4" target="_blank" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center hover-shadow">
-                            <div class="mb-3">
-                                <i class="fas fa-pen-nib text-primary fs-2"></i>
-                            </div>
-                            <h3 class="h5 fw-semibold mb-3">Introducing Component in PyLabFlow</h3>
-                            <p class="text-muted small mb-0">
-                                Explore the powerful new component system in PyLabFlow that enhances modularity in your workflows.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Blog Post: Research process -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="https://medium.com/@experquick/the-computational-research-cycle-how-experiments-evolve-through-change-insight-and-iteration-9ee9690dc8a6" target="_blank" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center hover-shadow">
-                            <div class="mb-3">
-                                <i class="fas fa-pen-nib text-primary fs-2"></i>
-                            </div>
-                            <h3 class="h5 fw-semibold mb-3">The Real Cycle of Computational Research</h3>
-                            <p class="text-muted small mb-0">
-                                How experiments evolve through change, insight, and iteration in computational research.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Blog Post: AI Research Failures -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="https://experquick.medium.com/why-most-ai-research-results-fall-apart-in-production-even-when-they-beat-sota-b347f4eb0e50?postPublishedType=initial" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center hover-shadow">
-                            <div class="mb-3">
-                                <i class="fas fa-exclamation-triangle text-primary fs-2"></i>
-                            </div>
-                            <h3 class="h5 fw-semibold mb-3">Why Most AI Research Fails in Production</h3>
-                            <p class="text-muted small mb-0">
-                                The hidden reasons state-of-the-art models collapse in real-world environments—and what the data truly shows.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-
-
-
-
-                <!-- stht -->
-
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- CTA Section -->
-    <section id="cta" class="py-5 py-lg-6 bg-light text-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="section-title fw-bold mb-4">
-                        Ready to Evolve with us?
-                    </h2>
-                    <p class="lead text-muted mb-5">
-                        Join our growing community of researchers, developers, and institutions building
-                        transparent, open infrastructure for science.
-                    </p>
-
-                    <div class="d-flex justify-content-center flex-wrap gap-3">
-                        <a href="https://github.com/ExperQuick" class="btn btn-primary btn-lg shadow-lg px-4 d-flex align-items-center">
-                            <i class="fab fa-github me-2"></i> View on GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/company/experquick" class="btn btn-outline-secondary btn-lg px-4">
-                            <i class="fab fa-linkedin-in me-2"></i> Follow on LinkedIn
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="text-white py-4" style="background:#858fbe;">
-        <div class="container">
-            <div class="row align-items-center text-center text-md-start">
-
-                <!-- Brand and description -->
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <a href="#" class="navbar-brand d-inline-flex align-items-center fw-bold text-white mb-2">
-                        <i class="fas fa-microscope text-primary me-2 fs-4"></i> ExperQuick
-                    </a>
-                    <p class="text-light small mb-0">
-                        Open infrastructure for reproducible computational research
-                    </p>
-                </div>
-
-                <!-- Social links -->
-                <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3">
-                    <a href="https://github.com/ExperQuick" class="text-white-50 fs-5"><i class="fab fa-github"></i></a>
-                    <a href="https://medium.com/@experquick" class="text-white-50 fs-5"><i class="fab fa-medium"></i></a>
-                     <a href="https://x.com/ExperQuick" class="text-white-50 fs-5"><i class="fab fa-x"></i></a>
-                    <a href="https://www.linkedin.com/company/experquick" class="text-white-50 fs-5"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@ExperQuick" class="text-white-50 fs-5"><i class="fab fa-youtube"></i></a>
-                    <a href="mailto:hello@experquick.org" class="text-white-50 fs-5"><i class="fas fa-envelope"></i></a>
-                </div>
-
-
-            </div>
-
-            <hr class="my-3 border-light opacity-50">
-
-            <!-- Footer bottom -->
-            <div class="text-center">
-                <p class="small text-white-50 mb-0">
-                    © 2025 <strong>ExperQuick</strong> — Open, transparent, and collaborative research infrastructure
-                    for the next era of science.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- jQuery and Bootstrap JS - REPLACE WITH LOCAL PATHS FOR OFFLINE USE -->
-    <script src="src/global/js/jquery-1.9.1.min.js"></script>
-    <script src="src/global/js/bootstrap.bundle.min.js"></script>
-
-    <!-- jQuery for Smooth Scrolling -->
-    <script src="src/index/"></script>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Make Research Reproducible</h1>
+        <p class="lead mb-4">ExperQuick structures your experiment workflow into clean, queryable components.</p>
+        <a href="/pg/tools.html" class="btn btn-primary btn-lg shadow">Explore Tools</a>
+    </div>
+</header>
+
+<!-- LATEST BLOGS -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Latest Blogs</h2>
+        <div id="home-blogs" class="row g-4"></div>
+    </div>
+</section>
+
+<!-- FEATURED TOOLS -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Featured Tools</h2>
+        <div id="home-tools" class="row g-4"></div>
+    </div>
+</section>
+
+<!-- EVENTS -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div id="home-events" class="row g-4"></div>
+    </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Sponsors</h2>
+        <div id="home-sponsors" class="row g-4"></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-dark text-center text-white">
+    <p>© 2025 ExperQuick. All rights reserved.</p>
+</footer>
+
+<script src="assets/js/homepage.js"></script>
 </body>
-
 </html>
