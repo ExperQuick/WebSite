@@ -1,0 +1,211 @@
+To build a cohesive **Problem Page**, we will follow the "Research OS" design language from your main page—using the high-contrast **Slate-900**, **Orange-600**, and **Blue-500** color scheme.
+
+This page focuses on the "Living Organism" nature of research and identifies exactly where traditional workflows break during the cycle of change.
+
+### The Problem: The Computational Research Cycle
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Problem | The Computational Research Cycle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); }
+        .step-card { transition: all 0.3s ease; }
+        .step-card:hover { transform: translateY(-5px); border-color: #f97316; }
+        /* Vertical line for the cycle visual */
+        .cycle-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #e2e8f0; z-index: 0; transform: translateX(-50%); }
+        @media (max-width: 768px) { .cycle-line { left: 20px; } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="ExperQuick Logo" class="h-10 w-auto">
+                <span class="text-xl font-bold tracking-tighter uppercase">ExperQuick</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-orange-600 transition">Home</a>
+                <a href="#bottleneck" class="text-orange-600 font-black">The Problem</a>
+                <a href="https://github.com/ExperQuick" class="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-24 px-6 gradient-bg text-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase tracking-widest">
+                The Reality of Research
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tight leading-tight">
+                Research is a <span class="text-orange-500">Living Organism</span>,<br class="hidden md:block" /> Not a Linear Path.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                Computational research grows, mutates, and reorganizes itself as new insights emerge. It is complex, iterative, and constantly in conversation with itself.
+            </p>
+        </div>
+    </header>
+
+    <section id="bottleneck" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20 relative z-10">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-slate-900">The Cycle of Chaos</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    Every stage is interconnected. Every discovery creates ripples. But in traditional workflows, these ripples turn into noise.
+                </p>
+            </div>
+
+            <div class="relative space-y-12">
+                <div class="cycle-line hidden md:block"></div>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-1">
+                        <h3 class="text-xl font-bold text-slate-900">1. Literature Review</h3>
+                        <p class="text-sm text-slate-600 mt-2">The intellectual ground. It serves as a living reference to be revisited repeatedly as new results emerge.</p>
+                    </div>
+                    <div class="order-2 flex md:justify-start">
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm w-full md:w-auto">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">The Trigger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-1 md:order-2">
+                        <h3 class="text-xl font-bold text-slate-900">2. Experiment Design</h3>
+                        <p class="text-sm text-slate-600 mt-2">Where imagination becomes actionable. But designs change dramatically—modifying how experiments are conceptualized.</p>
+                    </div>
+                    <div class="order-2 md:order-1 flex md:justify-end">
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm w-full md:w-auto">
+                            <i data-lucide="pen-tool" class="text-slate-400 w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10 grid md:grid-cols-1 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border-l-4 border-orange-500 shadow-lg step-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-100 p-3 rounded-xl shrink-0"><i data-lucide="code" class="text-orange-600"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">The Failure: Code Mutation</h3>
+                                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                                    As code evolves, tracking <strong>what</strong> changed and <strong>why</strong> becomes impossible. A single altered function can entirely change results, making old experiments mysterious.
+                                </p>
+                                <div class="mt-4 flex gap-4">
+                                    <span class="text-xs font-bold text-red-500 flex items-center gap-1"><i data-lucide="x"></i> Mysterious Results</span>
+                                    <span class="text-xs font-bold text-red-500 flex items-center gap-1"><i data-lucide="x"></i> Silent Failures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10 grid md:grid-cols-1 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border-l-4 border-blue-500 shadow-lg step-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 p-3 rounded-xl shrink-0"><i data-lucide="sliders" class="text-blue-600"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">The Failure: Informal Parameterization</h3>
+                                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                                    Parameters are the "knobs" of experiment scale. Changes often happen informally and are not logged, making reproduction a guessing game.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10 bg-slate-900 text-white p-8 rounded-3xl border border-slate-700 shadow-2xl text-center">
+                    <div class="inline-block bg-orange-500 p-3 rounded-full mb-4 shadow-lg shadow-orange-500/50">
+                        <i data-lucide="brain-circuit" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase tracking-tight mb-4">The Informatic Decision Wall</h3>
+                    <p class="text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed">
+                        This is the moment of synthesis—comparing code, parameters, reports, and results. It is here that researchers realize what needs adjustment. Good decisions depend on good information, and this is exactly where traditional workflows break.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                        <div class="bg-slate-800 p-3 rounded-lg">Code Versions</div>
+                        <div class="bg-slate-800 p-3 rounded-lg">Parameters</div>
+                        <div class="bg-slate-800 p-3 rounded-lg">Reports</div>
+                        <div class="bg-slate-800 p-3 rounded-lg">Results</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-[3rem] p-12 shadow-sm border border-slate-200 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-black uppercase text-slate-900 mb-6">Change is the Engine</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Every decision prompts change. Code must be revised. Parameters must be tuned. When change is unmanaged, research becomes slow. When change is tracked and understood, research becomes powerful.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                            <span class="text-sm font-bold text-slate-700">Code Revision & Refactoring</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                            <span class="text-sm font-bold text-slate-700">Parameter Tuning & Optimization</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                            <span class="text-sm font-bold text-slate-700">Configuration Correction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-3xl p-8 text-center text-white relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-blue-500"></div>
+                    <h3 class="text-xl font-bold mb-4">Returning with New Eyes</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Eventually, accumulated changes reshape understanding. You return to the literature with deeper insight and sharper questions. The cycle restarts—stronger, clearer, more informed.
+                    </p>
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-orange-400">
+                        <i data-lucide="refresh-cw" class="w-6 h-6 animate-spin-slow"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-black mb-6 text-slate-900">Stop Managing the Mess.</h2>
+            <p class="text-lg text-slate-600 mb-10">
+                The best approach isn't found in a single pass. It emerges through iteration. ExperQuick structures this chaos so you can focus on the science.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html" class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-orange-600 transition shadow-xl">See the Solution</a>
+                <a href="mailto:hello@experquick.org" class="bg-white border-2 border-slate-200 text-slate-900 px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-slate-50 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <img src="logo.jpg" alt="Logo" class="h-6 w-auto brightness-0 invert opacity-50">
+                <span class="text-xs font-bold uppercase tracking-widest">ExperQuick</span>
+            </div>
+            <p class="text-xs italic">"We all have the same competitor, Time. Let's Collab."</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+```
