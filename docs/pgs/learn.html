@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang=en style>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Learn | ExperQuick Research Infra</title>
+<meta name=description
+    content="ExperQuick provides modular, traceable, and queryable research infrastructure for PhD scholars and AI research labs. Turn research chaos into actionable insight.">
+<meta name=author content="ExperQuick Research Infra">
+<meta name=keywords
+    content="ExperQuick, PyLabFlow, research infrastructure, computational research, experiment management, reproducible research, AI research labs, PhD research tools">
+<link rel=canonical href=https://experquick.org />
+<meta property=og:title content="ExperQuick — Revolutionizing the Process of Research">
+<meta property=og:description
+    content="Modular, traceable, and queryable research infrastructure for PhD scholars and AI research labs.">
+<meta property=og:type content=website>
+<meta property=og:url content=https://experquick.org />
+<meta property=og:image
+    content=https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a4089839-30ce-4e11-a123-15daadae99e4/id-preview-02bcff58--4865709e-973a-4e38-b398-00d492eddc10.lovable.app-1766845097447.png>
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:site content=@ExperQuick>
+<meta name=twitter:title content="ExperQuick — Revolutionizing the Process of Research">
+<meta name=twitter:description
+    content="Turn research chaos into actionable insight with structured experiment infrastructure.">
+<meta name=twitter:image
+    content=https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a4089839-30ce-4e11-a123-15daadae99e4/id-preview-02bcff58--4865709e-973a-4e38-b398-00d492eddc10.lovable.app-1766845097447.png>
+<style>
+    *,
+    :before,
+    :after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: hsl(var(--blue-500)/.5);
+        --tw-ring-offset-shadow: 0 0#0000;
+        --tw-ring-shadow: 0 0#0000;
+        --tw-shadow: 0 0#0000;
+        --tw-shadow-colored: 0 0#0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style:
+    }
+
+    ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: hsl(var(--blue-500)/.5);
+        --tw-ring-offset-shadow: 0 0#0000;
+        --tw-ring-shadow: 0 0#0000;
+        --tw-shadow: 0 0#0000;
+        --tw-shadow-colored: 0 0#0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style:
+    }
+
+    *,
+    :before,
+    :after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid
+    }
+
+    :before,
+    :after {
+        --tw-content: ""
+    }
+
+    html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+        margin: 0;
+        line-height: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-size: inherit;
+        font-weight: inherit
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit
+    }
+
+    button {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        margin: 0;
+        padding: 0
+    }
+
+    button {
+        text-transform: none
+    }
+
+    button {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    ::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        margin: 0
+    }
+
+    ol,
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+
+    button {
+        cursor: pointer
+    }
+
+    :disabled {
+        cursor: default
+    }
+
+    img,
+    svg {
+        display: block;
+        vertical-align: middle
+    }
+
+    img {
+        max-width: 100%
+    }
+
+    :root {
+        --background: 210 20% 98%;
+        --foreground: 215 25% 15%;
+        --card: 0 0% 100%;
+        --card-foreground: 215 25% 15%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 215 25% 15%;
+        --primary: 24 95% 53%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 30% 96%;
+        --secondary-foreground: 215 25% 15%;
+        --muted: 210 20% 94%;
+        --muted-foreground: 215 15% 45%;
+        --accent: 207 70% 45%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 214 20% 88%;
+        --input: 214 20% 88%;
+        --ring: 24 95% 53%;
+        --radius: .5rem;
+        --slate-900: 215 28% 12%;
+        --slate-800: 215 25% 18%;
+        --slate-700: 215 20% 25%;
+        --slate-600: 215 15% 35%;
+        --slate-500: 215 12% 50%;
+        --slate-400: 215 10% 65%;
+        --slate-300: 210 15% 80%;
+        --slate-200: 210 20% 90%;
+        --slate-100: 210 25% 96%;
+        --orange-500: 24 95% 53%;
+        --orange-400: 27 96% 61%;
+        --orange-600: 21 90% 48%;
+        --blue-500: 207 70% 45%;
+        --blue-400: 207 80% 55%;
+        --blue-600: 207 75% 35%;
+        --gradient-hero: linear-gradient(135deg, hsl(var(--slate-900)) 0%, hsl(215 28% 18%) 100%);
+        --gradient-accent: linear-gradient(135deg, hsl(var(--orange-500)) 0%, hsl(var(--orange-600)) 100%);
+        --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 25% 98%) 100%);
+        --shadow-soft: 0 4px 20px -4px hsl(215 25% 15%/.08);
+        --shadow-medium: 0 8px 30px -6px hsl(215 25% 15%/.12);
+        --shadow-glow: 0 0 40px hsl(var(--orange-500)/.15)
+    }
+
+    .dark {
+        --background: 215 28% 10%;
+        --foreground: 210 25% 96%;
+        --card: 215 28% 14%;
+        --card-foreground: 210 25% 96%;
+        --popover: 215 28% 14%;
+        --popover-foreground: 210 25% 96%;
+        --primary: 24 95% 53%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 215 25% 20%;
+        --secondary-foreground: 210 25% 96%;
+        --muted: 215 25% 18%;
+        --muted-foreground: 215 15% 60%;
+        --accent: 207 70% 50%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 62% 30%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 215 25% 22%;
+        --input: 215 25% 22%;
+        --ring: 24 95% 53%
+    }
+
+    * {
+        border-color: hsl(var(--border))
+    }
+
+    html {
+        scroll-behavior: smooth
+    }
+
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif
+    }
+
+    .container {
+        width: 100%
+    }
+
+    @media (min-width:1400px) {
+        .container {
+            max-width: 1400px
+        }
+    }
+
+    .section-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80rem;
+        padding-left: 1rem;
+        padding-right: 1rem
+    }
+
+    @media (min-width:640px) {
+        .section-container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+    }
+
+    @media (min-width:1024px) {
+        .section-container {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+    }
+
+    .fixed {
+        position: fixed
+    }
+
+    .absolute {
+        position: absolute
+    }
+
+    .relative {
+        position: relative
+    }
+
+    .sticky {
+        position: sticky
+    }
+
+    .inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0
+    }
+
+    .bottom-20 {
+        bottom: 5rem
+    }
+
+    .left-0 {
+        left: 0
+    }
+
+    .left-10 {
+        left: 2.5rem
+    }
+
+    .right-10 {
+        right: 2.5rem
+    }
+
+    .top-0 {
+        top: 0
+    }
+
+    .top-20 {
+        top: 5rem
+    }
+
+    .z-50 {
+        z-index: 50
+    }
+
+    .z-\[100\] {
+        z-index: 100
+    }
+
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .mb-1 {
+        margin-bottom: .25rem
+    }
+
+    .mb-16 {
+        margin-bottom: 4rem
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem
+    }
+
+    .mb-6 {
+        margin-bottom: 1.5rem
+    }
+
+    .mb-8 {
+        margin-bottom: 2rem
+    }
+
+    .mt-16 {
+        margin-top: 4rem
+    }
+
+    .inline-block {
+        display: inline-block
+    }
+
+    .flex {
+        display: flex
+    }
+
+    .inline-flex {
+        display: inline-flex
+    }
+
+    .grid {
+        display: grid
+    }
+
+    .hidden {
+        display: none
+    }
+
+    .h-10 {
+        height: 2.5rem
+    }
+
+    .h-14 {
+        height: 3.5rem
+    }
+
+    .h-16 {
+        height: 4rem
+    }
+
+    .h-3 {
+        height: .75rem
+    }
+
+    .h-4 {
+        height: 1rem
+    }
+
+    .h-5 {
+        height: 1.25rem
+    }
+
+    .h-6 {
+        height: 1.5rem
+    }
+
+    .h-72 {
+        height: 18rem
+    }
+
+    .h-9 {
+        height: 2.25rem
+    }
+
+    .h-96 {
+        height: 24rem
+    }
+
+    .h-px {
+        height: 1px
+    }
+
+    .max-h-screen {
+        max-height: 100vh
+    }
+
+    .min-h-screen {
+        min-height: 100vh
+    }
+
+    .w-10 {
+        width: 2.5rem
+    }
+
+    .w-14 {
+        width: 3.5rem
+    }
+
+    .w-3 {
+        width: .75rem
+    }
+
+    .w-4 {
+        width: 1rem
+    }
+
+    .w-5 {
+        width: 1.25rem
+    }
+
+    .w-6 {
+        width: 1.5rem
+    }
+
+    .w-72 {
+        width: 18rem
+    }
+
+    .w-96 {
+        width: 24rem
+    }
+
+    .w-full {
+        width: 100%
+    }
+
+    .max-w-2xl {
+        max-width: 42rem
+    }
+
+    .max-w-3xl {
+        max-width: 48rem
+    }
+
+    .max-w-6xl {
+        max-width: 72rem
+    }
+
+    .max-w-sm {
+        max-width: 24rem
+    }
+
+    .max-w-xl {
+        max-width: 36rem
+    }
+
+    .flex-1 {
+        flex: 1 1 0%
+    }
+
+    .shrink-0 {
+        flex-shrink: 0
+    }
+
+    .-translate-y-0\.5 {
+        --tw-translate-y: -.125rem
+    }
+
+    .translate-x-0\.5 {
+        --tw-translate-x: .125rem;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    @keyframes pulse {
+        50% {
+            opacity: .5
+        }
+    }
+
+    .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .flex-col {
+        flex-direction: column
+    }
+
+    .flex-col-reverse {
+        flex-direction: column-reverse
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap
+    }
+
+    .items-start {
+        align-items: flex-start
+    }
+
+    .items-center {
+        align-items: center
+    }
+
+    .justify-center {
+        justify-content: center
+    }
+
+    .justify-between {
+        justify-content: space-between
+    }
+
+    .gap-1\.5 {
+        gap: .375rem
+    }
+
+    .gap-12 {
+        gap: 3rem
+    }
+
+    .gap-2 {
+        gap: .5rem
+    }
+
+    .gap-3 {
+        gap: .75rem
+    }
+
+    .gap-4 {
+        gap: 1rem
+    }
+
+    .gap-8 {
+        gap: 2rem
+    }
+
+    .space-y-3>:not([hidden])~:not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(.75rem*calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(.75rem*var(--tw-space-y-reverse))
+    }
+
+    .space-y-4>:not([hidden])~:not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem*calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem*var(--tw-space-y-reverse))
+    }
+
+    .space-y-6>:not([hidden])~:not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1.5rem*calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1.5rem*var(--tw-space-y-reverse))
+    }
+
+    .overflow-hidden {
+        overflow: hidden
+    }
+
+    .whitespace-nowrap {
+        white-space: nowrap
+    }
+
+    .whitespace-pre-line {
+        white-space: pre-line
+    }
+
+    .rounded {
+        border-radius: .25rem
+    }
+
+    .rounded-2xl {
+        border-radius: 1rem
+    }
+
+    .rounded-full {
+        border-radius: 9999px
+    }
+
+    .rounded-lg {
+        border-radius: var(--radius)
+    }
+
+    .rounded-md {
+        border-radius: calc(var(--radius) - 2px)
+    }
+
+    .rounded-xl {
+        border-radius: .75rem
+    }
+
+    .border {
+        border-width: 1px
+    }
+
+    .border-y {
+        border-top-width: 1px;
+        border-bottom-width: 1px
+    }
+
+    .border-b-4 {
+        border-bottom-width: 4px
+    }
+
+    .border-t {
+        border-top-width: 1px
+    }
+
+    .border-primary {
+        border-color: hsl(var(--primary))
+    }
+
+    .border-primary\/20 {
+        border-color: hsl(var(--primary)/.2)
+    }
+
+    .border-slate-600 {
+        border-color: hsl(var(--slate-600))
+    }
+
+    .border-slate-600\/50 {
+        border-color: hsl(var(--slate-600)/.5)
+    }
+
+    .border-slate-700 {
+        border-color: hsl(var(--slate-700))
+    }
+
+    .border-slate-700\/50 {
+        border-color: hsl(var(--slate-700)/.5)
+    }
+
+    .border-slate-800\/50 {
+        border-color: hsl(var(--slate-800)/.5)
+    }
+
+    .bg-accent\/5 {
+        background-color: hsl(var(--accent)/.05)
+    }
+
+    .bg-background {
+        background-color: hsl(var(--background))
+    }
+
+    .bg-card {
+        background-color: hsl(var(--card))
+    }
+
+    .bg-primary {
+        background-color: hsl(var(--primary))
+    }
+
+    .bg-primary\/10 {
+        background-color: hsl(var(--primary)/.1)
+    }
+
+    .bg-primary\/20 {
+        background-color: hsl(var(--primary)/.2)
+    }
+
+    .bg-primary\/5 {
+        background-color: hsl(var(--primary)/.05)
+    }
+
+    .bg-slate-700 {
+        background-color: hsl(var(--slate-700))
+    }
+
+    .bg-slate-700\/50 {
+        background-color: hsl(var(--slate-700)/.5)
+    }
+
+    .bg-slate-800 {
+        background-color: hsl(var(--slate-800))
+    }
+
+    .bg-slate-800\/50 {
+        background-color: hsl(var(--slate-800)/.5)
+    }
+
+    .bg-slate-900 {
+        background-color: hsl(var(--slate-900))
+    }
+
+    .bg-gradient-to-b {
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
+    }
+
+    .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops))
+    }
+
+    .from-primary\/20 {
+        --tw-gradient-from: hsl(var(--primary)/.2) var(--tw-gradient-from-position);
+        --tw-gradient-to: hsl(var(--primary)/0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .from-slate-900 {
+        --tw-gradient-from: hsl(var(--slate-900)) var(--tw-gradient-from-position);
+        --tw-gradient-to: hsl(var(--slate-900)/0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .from-transparent {
+        --tw-gradient-from: transparent var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(0 0 0/0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .via-primary\/50 {
+        --tw-gradient-to: hsl(var(--primary)/0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--primary)/.5) var(--tw-gradient-via-position), var(--tw-gradient-to)
+    }
+
+    .via-slate-900 {
+        --tw-gradient-to: hsl(var(--slate-900)/0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--slate-900)) var(--tw-gradient-via-position), var(--tw-gradient-to)
+    }
+
+    .to-orange-600\/20 {
+        --tw-gradient-to: hsl(var(--orange-600)/.2) var(--tw-gradient-to-position)
+    }
+
+    .to-slate-800 {
+        --tw-gradient-to: hsl(var(--slate-800)) var(--tw-gradient-to-position)
+    }
+
+    .to-slate-950 {
+        --tw-gradient-to: #020617 var(--tw-gradient-to-position)
+    }
+
+    .to-transparent {
+        --tw-gradient-to: transparent var(--tw-gradient-to-position)
+    }
+
+    .p-1 {
+        padding: .25rem
+    }
+
+    .p-1\.5 {
+        padding: .375rem
+    }
+
+    .p-2 {
+        padding: .5rem
+    }
+
+    .p-3 {
+        padding: .75rem
+    }
+
+    .p-4 {
+        padding: 1rem
+    }
+
+    .p-8 {
+        padding: 2rem
+    }
+
+    .px-3 {
+        padding-left: .75rem;
+        padding-right: .75rem
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem
+    }
+
+    .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+    }
+
+    .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem
+    }
+
+    .py-2 {
+        padding-top: .5rem;
+        padding-bottom: .5rem
+    }
+
+    .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem
+    }
+
+    .py-3 {
+        padding-top: .75rem;
+        padding-bottom: .75rem
+    }
+
+    .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem
+    }
+
+    .pt-8 {
+        padding-top: 2rem
+    }
+
+    .text-left {
+        text-align: left
+    }
+
+    .text-center {
+        text-align: center
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem
+    }
+
+    .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem
+    }
+
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem
+    }
+
+    .text-\[10px\] {
+        font-size: 10px
+    }
+
+    .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem
+    }
+
+    .text-sm {
+        font-size: .875rem;
+        line-height: 1.25rem
+    }
+
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem
+    }
+
+    .text-xs {
+        font-size: .75rem;
+        line-height: 1rem
+    }
+
+    .font-bold {
+        font-weight: 700
+    }
+
+    .font-medium {
+        font-weight: 500
+    }
+
+    .font-semibold {
+        font-weight: 600
+    }
+
+    .uppercase {
+        text-transform: uppercase
+    }
+
+    .leading-relaxed {
+        line-height: 1.625
+    }
+
+    .tracking-wide {
+        letter-spacing: .025em
+    }
+
+    .tracking-widest {
+        letter-spacing: .1em
+    }
+
+    .text-primary {
+        color: hsl(var(--primary))
+    }
+
+    .text-primary-foreground {
+        color: hsl(var(--primary-foreground))
+    }
+
+    .text-slate-100 {
+        color: hsl(var(--slate-100))
+    }
+
+    .text-slate-200 {
+        color: hsl(var(--slate-200))
+    }
+
+    .text-slate-300 {
+        color: hsl(var(--slate-300))
+    }
+
+    .text-slate-400 {
+        color: hsl(var(--slate-400))
+    }
+
+    .text-slate-500 {
+        color: hsl(var(--slate-500))
+    }
+
+    .text-slate-600 {
+        color: hsl(var(--slate-600))
+    }
+
+    .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255/var(--tw-text-opacity, 1))
+    }
+
+    .opacity-0 {
+        opacity: 0
+    }
+
+    .shadow-lg {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0/.1), 0 4px 6px -4px rgb(0 0 0/.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0#0000), var(--tw-ring-shadow, 0 0#0000), var(--tw-shadow)
+    }
+
+    .shadow-md {
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0/.1), 0 2px 4px -2px rgb(0 0 0/.1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0#0000), var(--tw-ring-shadow, 0 0#0000), var(--tw-shadow)
+    }
+
+    .ring-offset-background {
+        --tw-ring-offset-color: hsl(var(--background))
+    }
+
+    .blur-3xl {
+        --tw-blur: blur(64px);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+    .blur-md {
+        --tw-blur: blur(12px);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+    .drop-shadow-sm {
+        --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0/.05));
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+    .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        transition-duration: .15s
+    }
+
+    .transition-colors {
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        transition-duration: .15s
+    }
+
+    .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .duration-200 {
+        transition-duration: .2s
+    }
+
+    .duration-300 {
+        transition-duration: .3s
+    }
+
+    @keyframes enter {
+        0% {
+            opacity: var(--tw-enter-opacity, 1);
+            transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))
+        }
+    }
+
+    @keyframes exit {
+        to {
+            opacity: var(--tw-exit-opacity, 1);
+            transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))
+        }
+    }
+
+    .duration-200 {
+        animation-duration: .2s
+    }
+
+    .duration-300 {
+        animation-duration: .3s
+    }
+
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    .hover\:border-primary\/50:hover {
+        border-color: hsl(var(--primary)/.5)
+    }
+
+    .hover\:bg-orange-600:hover {
+        background-color: hsl(var(--orange-600))
+    }
+
+    .hover\:bg-primary\/10:hover {
+        background-color: hsl(var(--primary)/.1)
+    }
+
+    .hover\:bg-primary\/90:hover {
+        background-color: hsl(var(--primary)/.9)
+    }
+
+    .hover\:bg-slate-600:hover {
+        background-color: hsl(var(--slate-600))
+    }
+
+    .hover\:bg-slate-700:hover {
+        background-color: hsl(var(--slate-700))
+    }
+
+    .hover\:text-primary:hover {
+        color: hsl(var(--primary))
+    }
+
+    .hover\:no-underline:hover {
+        text-decoration-line: none
+    }
+
+    .hover\:shadow-lg:hover {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0/.1), 0 4px 6px -4px rgb(0 0 0/.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0#0000), var(--tw-ring-shadow, 0 0#0000), var(--tw-shadow)
+    }
+
+    .focus-visible\:outline-none:focus-visible {
+        outline: 2px solid transparent;
+        outline-offset: 2px
+    }
+
+    .focus-visible\:ring-2:focus-visible {
+        --tw-ring-offset-shadow: var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0#0000)
+    }
+
+    .focus-visible\:ring-ring:focus-visible {
+        --tw-ring-color: hsl(var(--ring))
+    }
+
+    .focus-visible\:ring-offset-2:focus-visible {
+        --tw-ring-offset-width: 2px
+    }
+
+    .disabled\:pointer-events-none:disabled {
+        pointer-events: none
+    }
+
+    .disabled\:opacity-50:disabled {
+        opacity: .5
+    }
+
+    .group:hover .group-hover\:translate-x-0 {
+        --tw-translate-x: 0px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .group:hover .group-hover\:translate-y-0 {
+        --tw-translate-y: 0px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .group:hover .group-hover\:text-primary {
+        color: hsl(var(--primary))
+    }
+
+    .group:hover .group-hover\:opacity-100 {
+        opacity: 1
+    }
+
+    .group:hover .group-hover\:blur-lg {
+        --tw-blur: blur(16px);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+    @keyframes accordion-up {
+        0% {
+            height: var(--radix-accordion-content-height)
+        }
+
+        to {
+            height: 0
+        }
+    }
+
+    .data-\[state\=closed\]\:animate-accordion-up[data-state=closed] {
+        animation: accordion-up .2s ease-out
+    }
+
+    @keyframes accordion-down {
+        0% {
+            height: 0
+        }
+
+        to {
+            height: var(--radix-accordion-content-height)
+        }
+    }
+
+    @media (min-width:640px) {
+        .sm\:bottom-0 {
+            bottom: 0
+        }
+
+        .sm\:right-0 {
+            right: 0
+        }
+
+        .sm\:top-auto {
+            top: auto
+        }
+
+        .sm\:block {
+            display: block
+        }
+
+        .sm\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+
+        .sm\:flex-row {
+            flex-direction: row
+        }
+
+        .sm\:flex-col {
+            flex-direction: column
+        }
+    }
+
+    @media (min-width:768px) {
+        .md\:h-20 {
+            height: 5rem
+        }
+
+        .md\:max-w-\[420px\] {
+            max-width: 420px
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .md\:text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .md\:text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem
+        }
+
+        .md\:text-5xl {
+            font-size: 3rem;
+            line-height: 1
+        }
+    }
+
+    @media (min-width:1024px) {
+        .lg\:col-span-4 {
+            grid-column: span 4/span 4
+        }
+
+        .lg\:col-span-8 {
+            grid-column: span 8/span 8
+        }
+
+        .lg\:flex {
+            display: flex
+        }
+
+        .lg\:hidden {
+            display: none
+        }
+
+        .lg\:grid-cols-12 {
+            grid-template-columns: repeat(12, minmax(0, 1fr))
+        }
+
+        .lg\:gap-8 {
+            gap: 2rem
+        }
+
+        .lg\:py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem
+        }
+    }
+
+    .\[\&_svg\]\:pointer-events-none svg {
+        pointer-events: none
+    }
+
+    .\[\&_svg\]\:size-4 svg {
+        width: 1rem;
+        height: 1rem
+    }
+
+    .\[\&_svg\]\:shrink-0 svg {
+        flex-shrink: 0
+    }
+</style>
+
+<style>
+    @keyframes swipe-out-left {
+        0% {
+            transform: var(--y) translate(var(--swipe-amount-x));
+            opacity: 1
+        }
+
+        to {
+            transform: var(--y) translate(calc(var(--swipe-amount-x) - 100%));
+            opacity: 0
+        }
+    }
+
+    @keyframes swipe-out-right {
+        0% {
+            transform: var(--y) translate(var(--swipe-amount-x));
+            opacity: 1
+        }
+
+        to {
+            transform: var(--y) translate(calc(var(--swipe-amount-x) + 100%));
+            opacity: 0
+        }
+    }
+
+    @keyframes swipe-out-up {
+        0% {
+            transform: var(--y) translateY(var(--swipe-amount-y));
+            opacity: 1
+        }
+
+        to {
+            transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+            opacity: 0
+        }
+    }
+
+    @keyframes swipe-out-down {
+        0% {
+            transform: var(--y) translateY(var(--swipe-amount-y));
+            opacity: 1
+        }
+
+        to {
+            transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+            opacity: 0
+        }
+    }
+
+    @keyframes sonner-fade-in {
+        0% {
+            opacity: 0;
+            transform: scale(.8)
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1)
+        }
+    }
+
+    @keyframes sonner-fade-out {
+        0% {
+            opacity: 1;
+            transform: scale(1)
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(.8)
+        }
+    }
+
+    @keyframes sonner-spin {
+        0% {
+            opacity: 1
+        }
+
+        to {
+            opacity: .15
+        }
+    }
+</style>
+<link rel=canonical href=https://preview--structured-research-hub.lovable.app/learn data-rh=true>
+<meta name=description
+    content="Learn the core concepts behind PyLabFlow and ExperQuick. Understand component abstraction, domain independence, structural queries, and more."
+    data-rh=true>
+<meta name=referrer content=no-referrer>
+<link type=image/x-icon rel="shortcut icon"
+    href="favicon.ico">
+<style>
+    .sf-hidden {
+        display: none !important
+    }
+</style>
+<meta http-equiv=content-security-policy
+    content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;">
+</head>
+
+<body>
+    <div id=root>
+        <div role=region aria-label="Notifications (F8)" tabindex=-1 style=pointer-events:none>
+            <ol tabindex=-1
+                class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+            </ol>
+        </div>
+        <section aria-label="Notifications alt+T" tabindex=-1 aria-live=polite aria-relevant="additions text"
+            aria-atomic=false>
+        </section>
+        <div class="min-h-screen bg-background dark">
+            <nav class="sticky top-0 z-50 bg-slate-900 border-b-4 border-primary shadow-lg">
+                <div class=section-container>
+                    <div class="flex items-center justify-between h-16 md:h-20"><a href=#
+                            class="flex items-center gap-3"><img
+                                src="../assets/images/logo/logo.png"
+                                alt="ExperQuick Logo" class="h-10 w-10 rounded bg-card p-1">
+                            <div class="hidden sm:block">
+                                <p class="text-lg font-bold text-slate-100">ExperQuick Research Infra
+                                <p class="text-[10px] text-primary uppercase tracking-widest font-medium">
+                                    Revolutionizing the Process of Research</p>
+                            </div>
+                        </a>
+                        <div class="hidden lg:flex items-center gap-8"><a
+                                class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                                href="/">Home</a>
+                                <a
+                                class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                                href="pgs/learn.html">Learn</a>
+                        </div>
+                        <div class="hidden lg:flex items-center gap-3"><a href=https://github.com/ExperQuick
+                                target=_blank rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-slate-800 text-slate-100 hover:bg-slate-700 border border-slate-600 h-9 rounded-md px-3"><svg
+                                    xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none
+                                    stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                    class="lucide lucide-github w-4 h-4">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>GitHub</a><a href=https://www.linkedin.com/company/experquick target=_blank
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-orange-600 shadow-md hover:shadow-lg h-9 rounded-md px-3"><svg
+                                    xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none
+                                    stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                    class="lucide lucide-linkedin w-4 h-4">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width=4 height=12 x=2 y=9></rect>
+                                    <circle cx=4 cy=4 r=2></circle>
+                                </svg>Follow Us</a></div><button
+                            class="lg:hidden p-2 text-slate-300 hover:text-primary sf-hidden"
+                            aria-label="Toggle menu"><svg xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                stroke-linejoin=round class="lucide lucide-menu w-6 h-6">
+                                <line x1=4 x2=20 y1=12 y2=12></line>
+                                <line x1=4 x2=20 y1=6 y2=6></line>
+                                <line x1=4 x2=20 y1=18 y2=18></line>
+                            </svg></button>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-3xl mx-auto text-center"><span
+                                class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">Documentation
+                                &amp; Learning</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Understanding PyLabFlow</h1>
+                            <p class="text-xl text-slate-300">Master the core concepts that make structured,
+                                reproducible research possible. From component abstraction to structural queries.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-20 bg-slate-800">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Concepts</h2>
+                            <p class="text-lg text-slate-300 max-w-2xl mx-auto">The foundational ideas that power
+                                PyLabFlow's approach to research infrastructure</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-layers w-6 h-6 text-primary">
+                                            <path
+                                                d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z">
+                                            </path>
+                                            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path>
+                                            <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">Component Abstraction</h3>
+                                        <p class="text-primary text-sm font-medium">The foundation of structured research</p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    Component Abstraction transforms every element of your experiment—models, layers,
+                                    augmentations, losses, optimizers—into reusable, traceable Python components.
+
+                                    Instead of writing monolithic scripts, you define each piece as an independent component that can be:
+                                    • Configured declaratively via JSON
+                                    • Nested hierarchically to build complex architectures
+                                    • Versioned automatically for reproducibility
+                                    • Swapped easily without changing code
+
+                                    This means changing from ResNet to EfficientNet is a config change, not a code rewrite.
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-globe w-6 h-6 text-primary">
+                                            <circle cx=12 cy=12 r=10></circle>
+                                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                            <path d="M2 12h20"></path>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">Domain Independence
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">
+                                            Works across all computational research fields</p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    PyLabFlow is designed to be domain-agnostic. Whether you're working in:
+
+                                    • Deep Learning — training neural networks, hyperparameter tuning
+                                    • Quantitative Finance — backtesting strategies, risk modeling
+                                    • Bioinformatics — sequence analysis, drug discovery
+                                    • Physics Simulations — particle systems, fluid dynamics
+                                    • Climate Science — weather modeling, data analysis
+
+                                    The core principles remain the same: structure your experiments, track lineage,
+                                    query results. The framework adapts to your domain, not the other way around.</div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-code w-6 h-6 text-primary">
+                                            <polyline points="16 18 22 12 16 6"></polyline>
+                                            <polyline points="8 6 2 12 8 18"></polyline>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">
+                                            Declarative Configuration
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">
+                                            Define experiments in config, not code
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    Experiments arev defined entirely through configuration files. This separation of concerns means:
+
+                                    • No code changes for different experiment variations
+                                    • Architecture sweeps become simple config permutations
+                                    • Hyperparameter grids are declarative, not programmatic
+                                    • Pipelines are explicit and version-controlled
+
+                                    Example: Running 100 experiments with different architectures and learning rates
+                                    requires zero code changes—just configuration variations.
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-search w-6 h-6 text-primary">
+                                            <circle cx=11 cy=11 r=8></circle>
+                                            <path d="m21 21-4.3-4.3"></path>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">
+                                            Structural Queries
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">
+                                            Find experiments by what they contain
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    Traditional experiment tracking finds runs by name or date. PyLabFlow lets you query by structure:
+
+                                    • "Show all experiments using ResNet with dropout &gt; 0.3"
+                                    • "Compare runs where the optimizer was Adam vs SGD"
+                                    • "Find experiments that used this specific augmentation pipeline"
+
+                                    This structural awareness means you can answer research questions directly from your
+                                    experiment database, not by manually digging through logs.</div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-git-branch w-6 h-6 text-primary">
+                                            <line x1=6 x2=6 y1=3 y2=15></line>
+                                            <circle cx=18 cy=6 r=3></circle>
+                                            <circle cx=6 cy=18 r=3></circle>
+                                            <path d="M18 9a9 9 0 0 1-9 9"></path>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">
+                                            Lineage Tracking
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">
+                                            Know exactly where every result comes from</p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    Every experiment maintains a complete lineage record:
+
+                                    • Component versions — which exact component code was used
+                                    • Configuration snapshots — full config at runtime
+                                    • Parent experiments — what this experiment was derived from
+                                    • Data provenance — which datasets and preprocessing
+
+                                    This means any result can be traced back to its exact origins, enabling true
+                                    reproducibility and debugging of unexpected results.
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-database w-6 h-6 text-primary">
+                                            <ellipse cx=12 cy=5 rx=9 ry=3></ellipse>
+                                            <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                                            <path d="M3 12A9 3 0 0 0 21 12"></path>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">Experiment Space
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">
+                                            Your experiments as a queryable database 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    All experiments form a structured, queryable space. This enables:
+
+                                    • Cross-experiment analysis — compare results across hundreds of runs
+                                    • Trend detection — identify which components consistently perform well
+                                    • Gap analysis — find unexplored regions of your experiment space
+                                    • Decision support — make data-driven choices about next experiments
+
+                                    The experiment space grows with your research, becoming more valuable over time as
+                                    patterns emerge.</div>
+                            </div>
+                            <div
+                                class="bg-slate-700/50 rounded-2xl p-8 border border-slate-600/50 hover:border-primary/50 transition-all duration-300">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <div class="p-3 bg-primary/10 rounded-xl"><svg xmlns=http://www.w3.org/2000/svg
+                                            width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                            stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                            class="lucide lucide-workflow w-6 h-6 text-primary">
+                                            <rect width=8 height=8 x=3 y=3 rx=2></rect>
+                                            <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                                            <rect width=8 height=8 x=13 y=13 rx=2></rect>
+                                        </svg></div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-1 drop-shadow-sm">
+                                            Pipeline Orchestration
+                                        </h3>
+                                        <p class="text-primary text-sm font-medium">Complex workflows made simple</p>
+                                    </div>
+                                </div>
+                                <div class="text-slate-200 whitespace-pre-line text-sm leading-relaxed">
+                                    Research often involves multi-stage pipelines: preprocessing, training, evaluation, analysis.
+                                    PyLabFlow handles:
+
+                                    • Stage dependencies — automatic ordering and data passing
+                                    • Parallel execution — run independent stages concurrently
+                                    • Failure recovery — resume from last successful stage
+                                    • Caching — skip unchanged stages automatically
+
+                                    This means you can focus on research logic, not infrastructure plumbing.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-20 bg-slate-900">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                                Common questions about PyLabFlow and how it fits into your research workflow
+                            </p>
+                        </div>
+                        <div class="max-w-3xl mx-auto">
+                            <div class=space-y-4 data-orientation=vertical>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:r1: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:r0:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item>
+                                            <span class=font-semibold>
+                                                How is PyLabFlow different from MLflow or Weights &amp; Biases?</span><svg
+                                                xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                                fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                                stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:r1: hidden role=region aria-labelledby=radix-:r0:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:r3: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:r2:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>
+                                                Do I need to rewrite my existing codebase?
+                                            </span><svg xmlns=http://www.w3.org/2000/svg width=24
+                                                height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                                stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:r3: hidden role=region aria-labelledby=radix-:r2:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:r5: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:r4:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>
+                                                What programming languages are supported?
+                                            </span><svg xmlns=http://www.w3.org/2000/svg
+                                                width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                                stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:r5: hidden role=region aria-labelledby=radix-:r4:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:r7: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:r6:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>
+                                                How does domain independence work in practice?
+                                            </span><svg
+                                                xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                                fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                                stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:r7: hidden role=region aria-labelledby=radix-:r6:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:r9: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:r8:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>
+                                                Can I use PyLabFlow for production systems?
+                                            </span><svg xmlns=http://www.w3.org/2000/svg width=24
+                                                height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                                stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:r9: hidden role=region aria-labelledby=radix-:r8:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:rb: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:ra:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>How do I get started with PyLabFlow?</span>
+                                            <svg xmlns=http://www.w3.org/2000/svg width=24
+                                                height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                                stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:rb: hidden role=region aria-labelledby=radix-:ra:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:rd: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:rc:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>Is PyLabFlow suitable for large-scale distributed training?</span>
+                                            <svg
+                                                xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                                fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                                stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:rd: hidden role=region aria-labelledby=radix-:rc:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                                <div data-state=closed data-orientation=vertical
+                                    class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 data-[state=open]:border-primary/50">
+                                    <h3 data-orientation=vertical data-state=closed class=flex><button type=button
+                                            aria-controls=radix-:rf: aria-expanded=false data-state=closed
+                                            data-orientation=vertical id=radix-:re:
+                                            class="flex flex-1 items-center justify-between font-medium transition-all [&amp;[data-state=open]>svg]:rotate-180 text-left text-white hover:text-primary py-6 hover:no-underline"
+                                            data-radix-collection-item><span class=font-semibold>How does versioning
+                                                work for components?</span><svg xmlns=http://www.w3.org/2000/svg
+                                                width=24 height=24 viewBox="0 0 24 24" fill=none stroke=currentColor
+                                                stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                                                <path d="m6 9 6 6 6-6"></path>
+                                            </svg></button></h3>
+                                    <div data-state=closed id=radix-:rf: hidden role=region aria-labelledby=radix-:re:
+                                        data-orientation=vertical
+                                        class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down sf-hidden"
+                                        style=--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-16 bg-gradient-to-r from-primary/20 to-orange-600/20 border-y border-primary/20">
+                    <div class="container mx-auto px-4 text-center">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+                        <p class="text-slate-200 mb-8 max-w-xl mx-auto">Dive into the documentation or explore our GitHub repositories to start structuring your research today.
+                        <div class="flex flex-wrap justify-center gap-4"><a href=https://pylabflow.readthedocs.io/
+                                target=_blank rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-colors"><svg
+                                    xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none
+                                    stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                    class="lucide lucide-code w-5 h-5">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>Read Documentation</a><a href=https://github.com/ExperQuick/PyLabFlow
+                                target=_blank rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors"><svg
+                                    xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none
+                                    stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round
+                                    class="lucide lucide-git-branch w-5 h-5">
+                                    <line x1=6 x2=6 y1=3 y2=15></line>
+                                    <circle cx=18 cy=6 r=3></circle>
+                                    <circle cx=6 cy=18 r=3></circle>
+                                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                                </svg>View on GitHub</a></div>
+                    </div>
+                </section>
+            </main>
+            <footer class="relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"
+                    style=background:linear-gradient(rgb(22,29,39),rgb(15,19,26))></div>
+                <div
+                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent">
+                </div>
+                <div class="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+                <div class="relative section-container py-16 lg:py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+                        <div class="lg:col-span-4 space-y-6"><a class="inline-flex items-center gap-3 group"
+                                href="/../">
+                            <div class=relative>
+                                <div
+                                    class="absolute inset-0 bg-primary/20 rounded-xl blur-md group-hover:blur-lg transition-all">
+                                </div><img
+                                    src="../assets/images/logo/logo.png" alt="ExperQuick Logo" class="relative h-14 w-14 rounded-xl bg-card p-1.5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">
+                                    ExperQuick
+                                <p class="text-xs text-primary font-medium tracking-wide uppercase">Research Infra</p>
+                            </div></a>
+                            <p class="text-slate-400 text-sm leading-relaxed max-w-sm">Open infrastructure for
+                                reproducible computational research. Structured, modular, and built for the AI era.
+                            <div class="flex items-center gap-2"><a href=https://github.com/ExperQuick target=_blank
+                                    rel="noopener noreferrer" aria-label=GitHub
+                                    class="group relative w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 flex items-center justify-center text-slate-400 hover:text-primary transition-all duration-300"><svg
+                                        xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                        fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                        stroke-linejoin=round class="lucide lucide-github w-4 h-4">
+                                        <path
+                                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                        </path>
+                                        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                    </svg></a><a href=https://www.linkedin.com/company/experquick target=_blank
+                                    rel="noopener noreferrer" aria-label=LinkedIn
+                                    class="group relative w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 flex items-center justify-center text-slate-400 hover:text-primary transition-all duration-300"><svg
+                                        xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                        fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                        stroke-linejoin=round class="lucide lucide-linkedin w-4 h-4">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect width=4 height=12 x=2 y=9></rect>
+                                        <circle cx=4 cy=4 r=2></circle>
+                                    </svg></a><a href=https://x.com/ExperQuick target=_blank rel="noopener noreferrer"
+                                    aria-label=X
+                                    class="group relative w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 flex items-center justify-center text-slate-400 hover:text-primary transition-all duration-300"><svg
+                                        xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                        fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                        stroke-linejoin=round class="lucide lucide-twitter w-4 h-4">
+                                        <path
+                                            d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                        </path>
+                                    </svg></a><a href=https://www.youtube.com/@ExperQuick target=_blank
+                                    rel="noopener noreferrer" aria-label=YouTube
+                                    class="group relative w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 flex items-center justify-center text-slate-400 hover:text-primary transition-all duration-300"><svg
+                                        xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                        fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                        stroke-linejoin=round class="lucide lucide-youtube w-4 h-4">
+                                        <path
+                                            d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                                        </path>
+                                        <path d="m10 15 5-3-5-3z"></path>
+                                    </svg></a><a href=mailto:hello@experquick.org target=_blank
+                                    rel="noopener noreferrer" aria-label=Email
+                                    class="group relative w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 flex items-center justify-center text-slate-400 hover:text-primary transition-all duration-300"><svg
+                                        xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24"
+                                        fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+                                        stroke-linejoin=round class="lucide lucide-mail w-4 h-4">
+                                        <rect width=20 height=16 x=2 y=4 rx=2></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg></a></div>
+                        </div>
+                        <div class=lg:col-span-8>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                                <div class=space-y-4>
+                                    <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Explore
+                                    </h4>
+                                    <ul class=space-y-3>
+                                        <li><a href="#about"
+                                                class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"><span>About</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                        <li><a href="#problem"
+                                                class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"><span>Problem</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                        <li><a href="#solutions"
+                                                class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"><span>Solution</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                    </ul>
+                                </div>
+                                <div class=space-y-4>
+                                    <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Resources
+                                    </h4>
+                                    <ul class=space-y-3>
+                                        
+                                        <li><a class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"
+                                                href="../pgs/learn.html"><span>Learn</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                    </ul>
+                                </div>
+                                <div class=space-y-4>
+                                    <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Community
+                                    </h4>
+                                    <ul class=space-y-3>
+
+                                        <li><a href=https://github.com/ExperQuick target=_blank
+                                                rel="noopener noreferrer"
+                                                class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"><span>GitHub</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                        <li><a href=https://www.linkedin.com/company/experquick target=_blank
+                                                rel="noopener noreferrer"
+                                                class="group inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-primary transition-colors"><span>LinkedIn</span><svg
+                                                    xmlns=http://www.w3.org/2000/svg width=24 height=24
+                                                    viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2
+                                                    stroke-linecap=round stroke-linejoin=round
+                                                    class="lucide lucide-arrow-up-right w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16 pt-8 border-t border-slate-800/50">
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <p class="text-xs text-slate-500">© 2025 ExperQuick Research Infra Pvt Ltd. All rights
+                                reserved.
+                            <p class="text-xs text-slate-600">Structured, modular, and reproducible research for the AI
+                                era.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body></html>
